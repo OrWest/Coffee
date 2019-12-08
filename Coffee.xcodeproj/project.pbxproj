@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		97351857239D841C0028A58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97351856239D841C0028A58D /* AppDelegate.swift */; };
-		9735185B239D841C0028A58D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9735185A239D841C0028A58D /* ViewController.swift */; };
 		9735185E239D841C0028A58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9735185C239D841C0028A58D /* Main.storyboard */; };
 		97351861239D841C0028A58D /* Coffee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9735185F239D841C0028A58D /* Coffee.xcdatamodeld */; };
 		97351863239D84220028A58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97351862239D84220028A58D /* Assets.xcassets */; };
 		97351866239D84220028A58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97351864239D84220028A58D /* LaunchScreen.storyboard */; };
 		97351871239D84220028A58D /* CoffeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97351870239D84220028A58D /* CoffeeTests.swift */; };
+		97351882239D8B2D0028A58D /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97351881239D8B2D0028A58D /* BaseVC.swift */; };
+		97351884239D8B580028A58D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97351883239D8B580028A58D /* MainVC.swift */; };
+		97351886239D8B630028A58D /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97351885239D8B630028A58D /* StatisticsVC.swift */; };
+		97351888239D8B6A0028A58D /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97351887239D8B6A0028A58D /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +32,6 @@
 /* Begin PBXFileReference section */
 		97351853239D841C0028A58D /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97351856239D841C0028A58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9735185A239D841C0028A58D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9735185D239D841C0028A58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97351860239D841C0028A58D /* Coffee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Coffee.xcdatamodel; sourceTree = "<group>"; };
 		97351862239D84220028A58D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +40,10 @@
 		9735186C239D84220028A58D /* CoffeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97351870239D84220028A58D /* CoffeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTests.swift; sourceTree = "<group>"; };
 		97351872239D84220028A58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97351881239D8B2D0028A58D /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		97351883239D8B580028A58D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		97351885239D8B630028A58D /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
+		97351887239D8B6A0028A58D /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +85,9 @@
 		97351855239D841C0028A58D /* Coffee */ = {
 			isa = PBXGroup;
 			children = (
-				97351856239D841C0028A58D /* AppDelegate.swift */,
-				9735185A239D841C0028A58D /* ViewController.swift */,
-				9735185C239D841C0028A58D /* Main.storyboard */,
-				97351862239D84220028A58D /* Assets.xcassets */,
-				97351864239D84220028A58D /* LaunchScreen.storyboard */,
-				97351867239D84220028A58D /* Info.plist */,
-				9735185F239D841C0028A58D /* Coffee.xcdatamodeld */,
+				9735187D239D8ADA0028A58D /* Classes */,
+				9735187C239D8AD30028A58D /* Resources */,
+				9735187B239D88450028A58D /* Supporting files */,
 			);
 			path = Coffee;
 			sourceTree = "<group>";
@@ -97,6 +99,53 @@
 				97351872239D84220028A58D /* Info.plist */,
 			);
 			path = CoffeeTests;
+			sourceTree = "<group>";
+		};
+		9735187B239D88450028A58D /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				97351864239D84220028A58D /* LaunchScreen.storyboard */,
+				97351867239D84220028A58D /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		9735187C239D8AD30028A58D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				97351862239D84220028A58D /* Assets.xcassets */,
+				9735185F239D841C0028A58D /* Coffee.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9735187D239D8ADA0028A58D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				97351880239D8B1C0028A58D /* Base */,
+				9735187E239D8AEB0028A58D /* Screens */,
+				97351856239D841C0028A58D /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9735187E239D8AEB0028A58D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				97351883239D8B580028A58D /* MainVC.swift */,
+				97351885239D8B630028A58D /* StatisticsVC.swift */,
+				97351887239D8B6A0028A58D /* SettingsVC.swift */,
+				9735185C239D841C0028A58D /* Main.storyboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		97351880239D8B1C0028A58D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				97351881239D8B2D0028A58D /* BaseVC.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9735185B239D841C0028A58D /* ViewController.swift in Sources */,
 				97351857239D841C0028A58D /* AppDelegate.swift in Sources */,
+				97351886239D8B630028A58D /* StatisticsVC.swift in Sources */,
+				97351884239D8B580028A58D /* MainVC.swift in Sources */,
 				97351861239D841C0028A58D /* Coffee.xcdatamodeld in Sources */,
+				97351882239D8B2D0028A58D /* BaseVC.swift in Sources */,
+				97351888239D8B6A0028A58D /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2FA6387WHP;
-				INFOPLIST_FILE = Coffee/Info.plist;
+				INFOPLIST_FILE = "Coffee/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,7 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2FA6387WHP;
-				INFOPLIST_FILE = Coffee/Info.plist;
+				INFOPLIST_FILE = "Coffee/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
