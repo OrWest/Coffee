@@ -27,6 +27,7 @@
 		973B0B3223A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B0B3123A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift */; };
 		973B0B3523A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B0B3423A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift */; };
 		A766DB2C23B20DF4001E0A25 /* AddShotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766DB2B23B20DF4001E0A25 /* AddShotVC.swift */; };
+		A766DB2E23B2370C001E0A25 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766DB2D23B2370C001E0A25 /* Formatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		973B0B3123A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNZSnapToCenterCollectionViewLayout.swift; sourceTree = "<group>"; };
 		973B0B3423A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A766DB2B23B20DF4001E0A25 /* AddShotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShotVC.swift; sourceTree = "<group>"; };
+		A766DB2D23B2370C001E0A25 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				973B0B2E23A5494300F2CCD4 /* LNZLayout */,
+				A766DB2D23B2370C001E0A25 /* Formatter.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97351857239D841C0028A58D /* AppDelegate.swift in Sources */,
+				A766DB2E23B2370C001E0A25 /* Formatter.swift in Sources */,
 				97351886239D8B630028A58D /* StatisticsVC.swift in Sources */,
 				A766DB2C23B20DF4001E0A25 /* AddShotVC.swift in Sources */,
 				973B0B2D23A548F800F2CCD4 /* LNZCarouselCollectionViewLayout.swift in Sources */,
