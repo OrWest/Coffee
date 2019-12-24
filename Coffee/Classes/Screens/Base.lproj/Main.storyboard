@@ -159,11 +159,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1K3-bm-JeD" customClass="ActivityRingView" customModule="ActivityRings">
+                                        <rect key="frame" x="147" y="40" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="Niq-3l-bea"/>
+                                            <constraint firstAttribute="width" constant="120" id="dL0-hA-bDS"/>
+                                        </constraints>
+                                    </skView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="1K3-bm-JeD" firstAttribute="centerX" secondItem="YGH-bp-RZe" secondAttribute="centerX" id="6Wx-7p-D4C"/>
                                     <constraint firstItem="MTC-MG-JpF" firstAttribute="centerX" secondItem="YGH-bp-RZe" secondAttribute="centerX" id="OLK-P3-RT6"/>
                                     <constraint firstItem="MTC-MG-JpF" firstAttribute="centerY" secondItem="YGH-bp-RZe" secondAttribute="centerY" id="nXF-5G-g6e"/>
+                                    <constraint firstItem="1K3-bm-JeD" firstAttribute="top" secondItem="YGH-bp-RZe" secondAttribute="top" constant="40" id="paG-mS-Mj4"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4TQ-WN-oN8">
@@ -241,6 +250,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Coffee" image="tabs_shot_not_active" selectedImage="tabs_shot_active" id="FrZ-Oo-pFs"/>
                     <connections>
+                        <outlet property="coffeeActivity" destination="1K3-bm-JeD" id="84g-02-XTe"/>
                         <outlet property="collectionView" destination="4TQ-WN-oN8" id="t3E-zZ-yfS"/>
                     </connections>
                 </viewController>

@@ -1,4 +1,5 @@
 PODS:
+  - ActivityRings (2.0.1)
   - Firebase/Analytics (6.13.0):
     - Firebase/Core
   - Firebase/Core (6.13.0):
@@ -71,11 +72,13 @@ PODS:
     - Realm (= 4.1.1)
 
 DEPENDENCIES:
+  - ActivityRings (= 2.0.1)
   - Firebase/Analytics (= 6.13.0)
   - RealmSwift (= 4.1.1)
 
 SPEC REPOS:
   trunk:
+    - ActivityRings
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -91,6 +94,7 @@ SPEC REPOS:
     - RealmSwift
 
 SPEC CHECKSUMS:
+  ActivityRings: f4cf172a0198c1994f4a5a1ff0bd88fd2d05b913
   Firebase: 458d109512200d1aca2e1b9b6cf7d68a869a4a46
   FirebaseAnalytics: 45f36d9c429fc91d206283900ab75390cd05ee8a
   FirebaseCore: 307ea2508df730c5865334e41965bd9ea344b0e5
@@ -105,6 +109,6 @@ SPEC CHECKSUMS:
   Realm: 25f0a8244cbb1c2271c922963ea8666fc2d8104d
   RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
 
-PODFILE CHECKSUM: 99d0477c7608da8c5e06aa47bc983decbfb06aa3
+PODFILE CHECKSUM: 4e38a6e0d972ea94b77575fa167c23ca8d979e2c
 
 COCOAPODS: 1.8.4

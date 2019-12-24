@@ -7,6 +7,7 @@ target 'Coffee' do
 
   pod 'Firebase/Analytics', '6.13.0'
   pod 'RealmSwift', '4.1.1'
+  pod 'ActivityRings', '2.0.1'
 
   target 'CoffeeTests' do
     inherit! :search_paths

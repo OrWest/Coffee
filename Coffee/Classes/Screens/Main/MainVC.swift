@@ -8,17 +8,21 @@
 
 import UIKit
 import RealmSwift
+import ActivityRings
 
 class MainVC: BaseVC {
     private let coffeeSelectedSegueId = "coffeeSelected"
 
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet weak var coffeeActivity: ActivityRingView!
 
     private let coffeeList = try! Realm().objects(Coffee.self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        coffeeActivity.ringWidth = 30
+        coffeeActivity.animateProgress(to: 1.7, withDuration: 1.5)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
