@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Statistics-->
         <scene sceneID="Re5-d6-PR7">
             <objects>
                 <viewController id="qET-ah-0zT" customClass="StatisticsVC" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="EHb-BD-7yF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="qaY-5K-3rZ"/>
+                    <tabBarItem key="tabBarItem" title="Statistics" image="tabs_statistics_not_active" selectedImage="tabs_statistics_active" id="qaY-5K-3rZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJO-CN-vEb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -483,5 +483,7 @@
         <image name="tabs_settings_not_active" width="30" height="30"/>
         <image name="tabs_shot_active" width="30" height="30"/>
         <image name="tabs_shot_not_active" width="30" height="30"/>
+        <image name="tabs_statistics_active" width="30" height="30"/>
+        <image name="tabs_statistics_not_active" width="30" height="30"/>
     </resources>
 </document>
