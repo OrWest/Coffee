@@ -15,3 +15,7 @@ class Coffee: Object {
     @objc dynamic var largeMl: Int = 0
     @objc dynamic var coffeineMgIn100ml: Int = 0
 }
+
+extension Coffee {
+    var image: UIImage? { UIImage(named: "drink_" + name) }
+}
