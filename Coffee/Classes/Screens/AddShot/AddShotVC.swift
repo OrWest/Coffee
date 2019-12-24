@@ -10,6 +10,8 @@ import UIKit
 
 class AddShotVC: BaseVC {
 
+    var coffee: Coffee!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -58,7 +58,7 @@
             </objects>
             <point key="canvasLocation" x="768" y="469"/>
         </scene>
-        <!--Item 1-->
+        <!--Coffee-->
         <scene sceneID="0YR-Bd-A4R">
             <objects>
                 <viewController id="5Kf-iK-LqM" customClass="MainVC" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
@@ -155,7 +155,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ll7-Wx-55F"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="tabs_shot_not_active" selectedImage="tabs_shot_active" id="FrZ-Oo-pFs"/>
+                    <tabBarItem key="tabBarItem" title="Coffee" image="tabs_shot_not_active" selectedImage="tabs_shot_active" id="FrZ-Oo-pFs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVf-Jd-hbv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,10 +173,10 @@
                                 <rect key="frame" x="40" y="99" width="240" height="350"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cU1-Tf-Yge">
-                                        <rect key="frame" x="225" y="-15" width="30" height="30"/>
+                                        <rect key="frame" x="220" y="-20" width="40" height="40"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="1Jd-dw-SvT"/>
+                                            <constraint firstAttribute="height" constant="40" id="1Jd-dw-SvT"/>
                                             <constraint firstAttribute="width" secondItem="cU1-Tf-Yge" secondAttribute="height" multiplier="1:1" id="8xw-aQ-jcf"/>
                                         </constraints>
                                         <connections>

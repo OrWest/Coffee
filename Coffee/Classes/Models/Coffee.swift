@@ -17,5 +17,5 @@ class Coffee: Object {
 }
 
 extension Coffee {
-    var image: UIImage? { UIImage(named: "drink_" + name) }
+    var image: UIImage? { UIImage(named: "drink_" + name.lowercased()) }
 }
