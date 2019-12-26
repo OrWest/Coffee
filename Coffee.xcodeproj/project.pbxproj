@@ -27,6 +27,8 @@
 		973B0B3223A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B0B3123A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift */; };
 		973B0B3523A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B0B3423A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift */; };
 		A73A948D23B4AC8300950199 /* CoffeeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A948C23B4AC8300950199 /* CoffeeRate.swift */; };
+		A73A949123B4C27F00950199 /* MainToAddShotTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A949023B4C27F00950199 /* MainToAddShotTransition.swift */; };
+		A73A949323B4C30D00950199 /* OpenAddShotAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A949223B4C30D00950199 /* OpenAddShotAnimator.swift */; };
 		A766DB2C23B20DF4001E0A25 /* AddShotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766DB2B23B20DF4001E0A25 /* AddShotVC.swift */; };
 		A766DB2E23B2370C001E0A25 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766DB2D23B2370C001E0A25 /* Formatter.swift */; };
 		A766DB3023B2498C001E0A25 /* BaseTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766DB2F23B2498C001E0A25 /* BaseTableVC.swift */; };
@@ -90,6 +92,8 @@
 		973B0B3123A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNZSnapToCenterCollectionViewLayout.swift; sourceTree = "<group>"; };
 		973B0B3423A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A73A948C23B4AC8300950199 /* CoffeeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRate.swift; sourceTree = "<group>"; };
+		A73A949023B4C27F00950199 /* MainToAddShotTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToAddShotTransition.swift; sourceTree = "<group>"; };
+		A73A949223B4C30D00950199 /* OpenAddShotAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAddShotAnimator.swift; sourceTree = "<group>"; };
 		A766DB2B23B20DF4001E0A25 /* AddShotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShotVC.swift; sourceTree = "<group>"; };
 		A766DB2D23B2370C001E0A25 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		A766DB2F23B2498C001E0A25 /* BaseTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableVC.swift; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 		973B0B2B23A548CC00F2CCD4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				A73A948F23B4C26B00950199 /* Transition */,
 				973B0B2E23A5494300F2CCD4 /* LNZLayout */,
 				A766DB2D23B2370C001E0A25 /* Formatter.swift */,
 				A73A948C23B4AC8300950199 /* CoffeeRate.swift */,
@@ -269,6 +274,15 @@
 				03741BB56A3F890D5C6315A3 /* Pods-CoffeeTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A73A948F23B4C26B00950199 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				A73A949023B4C27F00950199 /* MainToAddShotTransition.swift */,
+				A73A949223B4C30D00950199 /* OpenAddShotAnimator.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +460,8 @@
 				97351857239D841C0028A58D /* AppDelegate.swift in Sources */,
 				A766DB3323B249C2001E0A25 /* ShotsCMSVC.swift in Sources */,
 				A766DB2E23B2370C001E0A25 /* Formatter.swift in Sources */,
+				A73A949323B4C30D00950199 /* OpenAddShotAnimator.swift in Sources */,
+				A73A949123B4C27F00950199 /* MainToAddShotTransition.swift in Sources */,
 				97351886239D8B630028A58D /* StatisticsVC.swift in Sources */,
 				A766DB2C23B20DF4001E0A25 /* AddShotVC.swift in Sources */,
 				973B0B2D23A548F800F2CCD4 /* LNZCarouselCollectionViewLayout.swift in Sources */,

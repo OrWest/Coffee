@@ -18,6 +18,13 @@ class AddShotVC: BaseVC {
     @IBOutlet weak var sizeSegmented: UISegmentedControl!
     @IBOutlet weak var volumeField: UITextField!
     @IBOutlet weak var coffeinInsideLabel: UILabel!
+    
+    @IBOutlet weak var imageContainerView: UIView!
+    @IBOutlet weak var contentContainerView: UIView!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var darkView: UIView!
+    
+    weak var transition: MainToAddShotTransition?
 
     var coffee: Coffee!
     private var volume: Int!

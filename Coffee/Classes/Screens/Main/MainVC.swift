@@ -15,7 +15,7 @@ class MainVC: BaseVC {
     private let ringActivityUpdateDuration = 0.5
     private let coffeeSelectedSegueId = "coffeeSelected"
 
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var coffeeActivity: ActivityRingView!
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
@@ -24,6 +24,8 @@ class MainVC: BaseVC {
     private let todayShotsList = try! Realm().objects(CoffeeShot.self)
     private var todayShotsToken: NotificationToken?
     private let coffeeRate = CoffeeRate()
+
+    private var addShotTransition: MainToAddShotTransition?
 
     deinit {
         todayShotsToken?.invalidate()
@@ -80,6 +82,12 @@ class MainVC: BaseVC {
         let coffee = coffeeList[indexPath.item]
         dest.coffee = coffee
 
+        let transition = MainToAddShotTransition()
+        transition.selectedIndexPath = indexPath
+        dest.transitioningDelegate = transition
+        dest.transition = transition
+
+        addShotTransition = transition
         print("Selected coffee: \(coffee.name)")
     }
 }
