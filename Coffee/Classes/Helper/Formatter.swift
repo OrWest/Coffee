@@ -16,4 +16,8 @@ class Formatter {
     static func formatMl(_ value: Int) -> String {
         return "\(value) ml"
     }
+
+    static func formatPercent(_ value: Int) -> String {
+        return "\(value)%"
+    }
 }

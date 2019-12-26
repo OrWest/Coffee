@@ -150,34 +150,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGH-bp-RZe">
-                                <rect key="frame" x="0.0" y="44" width="414" height="519"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTC-MG-JpF">
-                                        <rect key="frame" x="112.5" y="200" width="189.5" height="119.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="100"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1K3-bm-JeD" customClass="ActivityRingView" customModule="ActivityRings">
-                                        <rect key="frame" x="147" y="40" width="120" height="120"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="Niq-3l-bea"/>
-                                            <constraint firstAttribute="width" constant="120" id="dL0-hA-bDS"/>
-                                        </constraints>
-                                    </skView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="1K3-bm-JeD" firstAttribute="centerX" secondItem="YGH-bp-RZe" secondAttribute="centerX" id="6Wx-7p-D4C"/>
-                                    <constraint firstItem="MTC-MG-JpF" firstAttribute="centerX" secondItem="YGH-bp-RZe" secondAttribute="centerX" id="OLK-P3-RT6"/>
-                                    <constraint firstItem="MTC-MG-JpF" firstAttribute="centerY" secondItem="YGH-bp-RZe" secondAttribute="centerY" id="nXF-5G-g6e"/>
-                                    <constraint firstItem="1K3-bm-JeD" firstAttribute="top" secondItem="YGH-bp-RZe" secondAttribute="top" constant="40" id="paG-mS-Mj4"/>
-                                </constraints>
-                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4TQ-WN-oN8">
-                                <rect key="frame" x="0.0" y="563" width="414" height="190"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="583" width="414" height="190"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="190" id="eTa-5t-5Wb"/>
                                 </constraints>
@@ -235,23 +210,75 @@
                                     <outlet property="delegate" destination="5Kf-iK-LqM" id="yag-Qq-rBA"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCg-CV-CVT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="519"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEo-h4-11f">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="439"/>
+                                        <subviews>
+                                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1K3-bm-JeD" customClass="ActivityRingView" customModule="ActivityRings">
+                                                <rect key="frame" x="82" y="94.5" width="250" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="999" constant="250" id="Niq-3l-bea"/>
+                                                    <constraint firstAttribute="width" secondItem="1K3-bm-JeD" secondAttribute="height" multiplier="1:1" id="wiZ-Af-dLr"/>
+                                                </constraints>
+                                            </skView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="60" translatesAutoresizingMaskIntoConstraints="NO" id="MTC-MG-JpF">
+                                                <rect key="frame" x="131" y="172" width="152" height="95.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="80"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="1K3-bm-JeD" firstAttribute="centerX" secondItem="NEo-h4-11f" secondAttribute="centerX" id="ESY-mj-2b9"/>
+                                            <constraint firstItem="1K3-bm-JeD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NEo-h4-11f" secondAttribute="top" constant="10" id="GSP-bP-j5a"/>
+                                            <constraint firstItem="1K3-bm-JeD" firstAttribute="centerX" secondItem="NEo-h4-11f" secondAttribute="centerX" id="Omm-da-2DM"/>
+                                            <constraint firstItem="MTC-MG-JpF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1K3-bm-JeD" secondAttribute="leading" constant="40" id="ls4-Fw-0VL"/>
+                                            <constraint firstItem="MTC-MG-JpF" firstAttribute="centerX" secondItem="1K3-bm-JeD" secondAttribute="centerX" id="v3r-dm-Ell"/>
+                                            <constraint firstItem="1K3-bm-JeD" firstAttribute="centerY" secondItem="NEo-h4-11f" secondAttribute="centerY" id="wEQ-i5-VsX"/>
+                                            <constraint firstItem="MTC-MG-JpF" firstAttribute="centerY" secondItem="1K3-bm-JeD" secondAttribute="centerY" id="yrc-rM-Hn3"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT1-wl-OFa">
+                                        <rect key="frame" x="10" y="449" width="394" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="NEo-h4-11f" secondAttribute="bottom" constant="80" id="9f7-Yf-rxe"/>
+                                    <constraint firstItem="NEo-h4-11f" firstAttribute="leading" secondItem="tCg-CV-CVT" secondAttribute="leading" id="EBV-rN-UoH"/>
+                                    <constraint firstItem="NEo-h4-11f" firstAttribute="top" secondItem="tCg-CV-CVT" secondAttribute="top" id="czS-ms-aWA"/>
+                                    <constraint firstAttribute="trailing" secondItem="bT1-wl-OFa" secondAttribute="trailing" constant="10" id="iie-cy-afY"/>
+                                    <constraint firstAttribute="trailing" secondItem="NEo-h4-11f" secondAttribute="trailing" id="l2b-vs-4HO"/>
+                                    <constraint firstItem="bT1-wl-OFa" firstAttribute="leading" secondItem="tCg-CV-CVT" secondAttribute="leading" constant="10" id="mxp-ML-wpS"/>
+                                    <constraint firstAttribute="bottom" secondItem="bT1-wl-OFa" secondAttribute="bottom" constant="10" id="txf-Az-ssI"/>
+                                    <constraint firstItem="bT1-wl-OFa" firstAttribute="top" secondItem="NEo-h4-11f" secondAttribute="bottom" constant="10" id="wu1-h8-hry"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="4TQ-WN-oN8" firstAttribute="leading" secondItem="Ll7-Wx-55F" secondAttribute="leading" id="0DF-Ql-Zol"/>
-                            <constraint firstItem="YGH-bp-RZe" firstAttribute="top" secondItem="Ll7-Wx-55F" secondAttribute="top" id="7l6-85-B7v"/>
-                            <constraint firstItem="YGH-bp-RZe" firstAttribute="leading" secondItem="Ll7-Wx-55F" secondAttribute="leading" id="HMp-ry-0Cz"/>
-                            <constraint firstItem="Ll7-Wx-55F" firstAttribute="bottom" secondItem="4TQ-WN-oN8" secondAttribute="bottom" constant="60" id="RjS-ph-iST"/>
+                            <constraint firstItem="Ll7-Wx-55F" firstAttribute="bottom" secondItem="4TQ-WN-oN8" secondAttribute="bottom" constant="40" id="RjS-ph-iST"/>
                             <constraint firstItem="4TQ-WN-oN8" firstAttribute="trailing" secondItem="Ll7-Wx-55F" secondAttribute="trailing" id="SQH-GJ-vRh"/>
-                            <constraint firstItem="YGH-bp-RZe" firstAttribute="trailing" secondItem="Ll7-Wx-55F" secondAttribute="trailing" id="otm-g1-H0X"/>
-                            <constraint firstItem="4TQ-WN-oN8" firstAttribute="top" secondItem="YGH-bp-RZe" secondAttribute="bottom" id="uTD-Cu-oTc"/>
+                            <constraint firstItem="tCg-CV-CVT" firstAttribute="top" secondItem="Ll7-Wx-55F" secondAttribute="top" id="Ze8-cO-mb1"/>
+                            <constraint firstItem="tCg-CV-CVT" firstAttribute="trailing" secondItem="Ll7-Wx-55F" secondAttribute="trailing" id="iad-o7-r70"/>
+                            <constraint firstItem="4TQ-WN-oN8" firstAttribute="top" secondItem="tCg-CV-CVT" secondAttribute="bottom" constant="20" id="kbz-2k-Cfg"/>
+                            <constraint firstItem="tCg-CV-CVT" firstAttribute="leading" secondItem="Ll7-Wx-55F" secondAttribute="leading" id="oUv-sD-qw2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ll7-Wx-55F"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Coffee" image="tabs_shot_not_active" selectedImage="tabs_shot_active" id="FrZ-Oo-pFs"/>
                     <connections>
+                        <outlet property="activityLabel" destination="MTC-MG-JpF" id="hbc-UG-LqW"/>
                         <outlet property="coffeeActivity" destination="1K3-bm-JeD" id="84g-02-XTe"/>
                         <outlet property="collectionView" destination="4TQ-WN-oN8" id="t3E-zZ-yfS"/>
+                        <outlet property="messageLabel" destination="bT1-wl-OFa" id="2j5-GX-pn5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVf-Jd-hbv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
