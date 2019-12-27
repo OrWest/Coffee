@@ -31,6 +31,7 @@
 		A73A949323B4C30D00950199 /* OpenAddShotAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A949223B4C30D00950199 /* OpenAddShotAnimator.swift */; };
 		A73A949523B4EA3A00950199 /* CloseAddShotAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A949423B4EA3A00950199 /* CloseAddShotAnimator.swift */; };
 		A754178223B5F99C00F4D7A0 /* CMSShotSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754178123B5F99C00F4D7A0 /* CMSShotSection.swift */; };
+		A762DC8923B6018800246692 /* CMSShotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762DC8823B6018800246692 /* CMSShotCell.swift */; };
 		A766DB2C23B20DF4001E0A25 /* AddShotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766DB2B23B20DF4001E0A25 /* AddShotVC.swift */; };
 		A766DB2E23B2370C001E0A25 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766DB2D23B2370C001E0A25 /* Formatter.swift */; };
 		A766DB3023B2498C001E0A25 /* BaseTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766DB2F23B2498C001E0A25 /* BaseTableVC.swift */; };
@@ -98,6 +99,7 @@
 		A73A949223B4C30D00950199 /* OpenAddShotAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAddShotAnimator.swift; sourceTree = "<group>"; };
 		A73A949423B4EA3A00950199 /* CloseAddShotAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseAddShotAnimator.swift; sourceTree = "<group>"; };
 		A754178123B5F99C00F4D7A0 /* CMSShotSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSShotSection.swift; sourceTree = "<group>"; };
+		A762DC8823B6018800246692 /* CMSShotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSShotCell.swift; sourceTree = "<group>"; };
 		A766DB2B23B20DF4001E0A25 /* AddShotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShotVC.swift; sourceTree = "<group>"; };
 		A766DB2D23B2370C001E0A25 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		A766DB2F23B2498C001E0A25 /* BaseTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableVC.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 			children = (
 				A766DB3223B249C1001E0A25 /* ShotsCMSVC.swift */,
 				A754178123B5F99C00F4D7A0 /* CMSShotSection.swift */,
+				A762DC8823B6018800246692 /* CMSShotCell.swift */,
 			);
 			path = CMS;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				A766DB2C23B20DF4001E0A25 /* AddShotVC.swift in Sources */,
 				A73A949523B4EA3A00950199 /* CloseAddShotAnimator.swift in Sources */,
 				973B0B2D23A548F800F2CCD4 /* LNZCarouselCollectionViewLayout.swift in Sources */,
+				A762DC8923B6018800246692 /* CMSShotCell.swift in Sources */,
 				973B0B3223A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift in Sources */,
 				973B0B3523A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift in Sources */,
 				9711116D23A5518800144C72 /* CoffeeShot.swift in Sources */,

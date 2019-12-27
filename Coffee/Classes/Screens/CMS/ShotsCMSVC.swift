@@ -59,13 +59,9 @@ class ShotsCMSVC: BaseTableVC {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "shot", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shot", for: indexPath) as! CMSShotCell
         let shot = sections[indexPath.section].shots[indexPath.row]
-        cell.textLabel?.text = shot.coffee.name
-        cell.detailTextLabel?.text = Formatter.formatMl(shot.ml)
-        cell.imageView?.image = shot.coffee.imageForCell
-
+        cell.configure(shot: shot)
         return cell
     }
 

@@ -9,10 +9,17 @@
 import Foundation
 
 class Formatter {
-    private static let cmsSectionDateFormatter: DateFormatter = {
+    private static let dateWithoutTimeFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
+        return formatter
+    }()
+
+    private static let timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .none
+        formatter.timeStyle = .short
         return formatter
     }()
 
@@ -29,6 +36,10 @@ class Formatter {
     }
 
     static func formatCMSSectionDate(_ date: Date) -> String {
-        return cmsSectionDateFormatter.string(from: date)
+        return dateWithoutTimeFormatter.string(from: date)
+    }
+
+    static func formatCMSTime(_ date: Date) -> String {
+        return timeFormatter.string(from: date)
     }
 }
