@@ -16,7 +16,7 @@ class OpenAddShotAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     }
 
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 1.5
+        return 1.2
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -44,11 +44,11 @@ class OpenAddShotAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             toViewController.darkView.alpha = 1.0
             imageView.frame = destRect
         }, completion: { _ in
-            UIView.animate(withDuration: 0.4, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 toViewController.imageContainerView.alpha = 1.0
                 toViewController.coffeeLabel.alpha = 1.0
             }, completion: { _ in
-                UIView.animate(withDuration: 0.5, animations: {
+                UIView.animate(withDuration: 0.3, animations: {
                     toViewController.addButton.alpha = 1.0
                     toViewController.contentContainerView.alpha = 1.0
                 }, completion: { _ in
