@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Espresso",
+        "smallMl": 50,
+        "coffeineMgIn100ml": 125
+    },
+    {
+        "name": "Americano",
+        "smallMl": 150,
+        "coffeineMgIn100ml": 42
+    },
+    {
+        "name": "Cafe Latte",
+        "smallMl": 236,
+        "largeMl": 473,
+        "coffeineMgIn100ml": 31
+    },
+    {
+        "name": "Cappuccino",
+        "smallMl": 177,
+        "largeMl": 330,
+        "coffeineMgIn100ml": 57
+    }
+]
