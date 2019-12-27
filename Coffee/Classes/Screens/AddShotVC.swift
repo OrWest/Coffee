@@ -79,6 +79,7 @@ class AddShotVC: BaseVC {
             assertionFailure(error.localizedDescription)
         }
 
+        transition?.addedNewShot = true
         dismiss(animated: true)
     }
 

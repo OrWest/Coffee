@@ -70,11 +70,13 @@ PODS:
   - Realm/Headers (4.1.1)
   - RealmSwift (4.1.1):
     - Realm (= 4.1.1)
+  - SwiftDate (5.1.0)
 
 DEPENDENCIES:
   - ActivityRings (= 2.0.1)
   - Firebase/Analytics (= 6.13.0)
   - RealmSwift (= 4.1.1)
+  - SwiftDate (~> 5.0)
 
 SPEC REPOS:
   trunk:
@@ -92,6 +94,7 @@ SPEC REPOS:
     - nanopb
     - Realm
     - RealmSwift
+    - SwiftDate
 
 SPEC CHECKSUMS:
   ActivityRings: f4cf172a0198c1994f4a5a1ff0bd88fd2d05b913
@@ -108,7 +111,8 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Realm: 25f0a8244cbb1c2271c922963ea8666fc2d8104d
   RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
+  SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
 
-PODFILE CHECKSUM: 4e38a6e0d972ea94b77575fa167c23ca8d979e2c
+PODFILE CHECKSUM: ecd44b23b25711b2a9dcf54e673851fca347f037
 
 COCOAPODS: 1.8.4

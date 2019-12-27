@@ -275,6 +275,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Coffee" image="tabs_shot_not_active" selectedImage="tabs_shot_active" id="FrZ-Oo-pFs"/>
                     <connections>
+                        <outlet property="activityContainerView" destination="NEo-h4-11f" id="Cx8-Ub-MtJ"/>
                         <outlet property="activityLabel" destination="MTC-MG-JpF" id="hbc-UG-LqW"/>
                         <outlet property="coffeeActivity" destination="1K3-bm-JeD" id="84g-02-XTe"/>
                         <outlet property="collectionView" destination="4TQ-WN-oN8" id="t3E-zZ-yfS"/>

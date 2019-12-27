@@ -29,6 +29,7 @@
 		A73A948D23B4AC8300950199 /* CoffeeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A948C23B4AC8300950199 /* CoffeeRate.swift */; };
 		A73A949123B4C27F00950199 /* MainToAddShotTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A949023B4C27F00950199 /* MainToAddShotTransition.swift */; };
 		A73A949323B4C30D00950199 /* OpenAddShotAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A949223B4C30D00950199 /* OpenAddShotAnimator.swift */; };
+		A73A949523B4EA3A00950199 /* CloseAddShotAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A949423B4EA3A00950199 /* CloseAddShotAnimator.swift */; };
 		A766DB2C23B20DF4001E0A25 /* AddShotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766DB2B23B20DF4001E0A25 /* AddShotVC.swift */; };
 		A766DB2E23B2370C001E0A25 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766DB2D23B2370C001E0A25 /* Formatter.swift */; };
 		A766DB3023B2498C001E0A25 /* BaseTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766DB2F23B2498C001E0A25 /* BaseTableVC.swift */; };
@@ -94,6 +95,7 @@
 		A73A948C23B4AC8300950199 /* CoffeeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRate.swift; sourceTree = "<group>"; };
 		A73A949023B4C27F00950199 /* MainToAddShotTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToAddShotTransition.swift; sourceTree = "<group>"; };
 		A73A949223B4C30D00950199 /* OpenAddShotAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAddShotAnimator.swift; sourceTree = "<group>"; };
+		A73A949423B4EA3A00950199 /* CloseAddShotAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseAddShotAnimator.swift; sourceTree = "<group>"; };
 		A766DB2B23B20DF4001E0A25 /* AddShotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShotVC.swift; sourceTree = "<group>"; };
 		A766DB2D23B2370C001E0A25 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		A766DB2F23B2498C001E0A25 /* BaseTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableVC.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			children = (
 				A73A949023B4C27F00950199 /* MainToAddShotTransition.swift */,
 				A73A949223B4C30D00950199 /* OpenAddShotAnimator.swift */,
+				A73A949423B4EA3A00950199 /* CloseAddShotAnimator.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				A73A949123B4C27F00950199 /* MainToAddShotTransition.swift in Sources */,
 				97351886239D8B630028A58D /* StatisticsVC.swift in Sources */,
 				A766DB2C23B20DF4001E0A25 /* AddShotVC.swift in Sources */,
+				A73A949523B4EA3A00950199 /* CloseAddShotAnimator.swift in Sources */,
 				973B0B2D23A548F800F2CCD4 /* LNZCarouselCollectionViewLayout.swift in Sources */,
 				973B0B3223A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift in Sources */,
 				973B0B3523A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift in Sources */,

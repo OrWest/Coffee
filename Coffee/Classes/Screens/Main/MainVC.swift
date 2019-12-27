@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import ActivityRings
+import SwiftDate
 
 class MainVC: BaseVC {
     private let ringActivityInitialDuration = 2.0
@@ -19,9 +20,10 @@ class MainVC: BaseVC {
     @IBOutlet weak var coffeeActivity: ActivityRingView!
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var activityContainerView: UIView!
 
     private let coffeeList = try! Realm().objects(Coffee.self)
-    private let todayShotsList = try! Realm().objects(CoffeeShot.self)
+    private let todayShotsList = try! Realm().objects(CoffeeShot.self).filter("date >= %@", Date().dateAtStartOf(.day))
     private var todayShotsToken: NotificationToken?
     private let coffeeRate = CoffeeRate()
 
@@ -63,7 +65,6 @@ class MainVC: BaseVC {
     private func updateCoffeeAcitivity(value: Double) {
         coffeeActivity.animateProgress(to: value, withDuration: ringActivityInitialDuration)
         activityLabel.text = Formatter.formatPercent(Int(value * 100))
-
     }
 
     private func coffeeConsumedInPercent() -> Double {
@@ -84,6 +85,7 @@ class MainVC: BaseVC {
 
         let transition = MainToAddShotTransition()
         transition.selectedIndexPath = indexPath
+        transition.percentCenter = activityContainerView.superview!.convert(activityContainerView.center, to: view)
         dest.transitioningDelegate = transition
         dest.transition = transition
 
