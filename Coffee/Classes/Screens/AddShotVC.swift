@@ -38,6 +38,7 @@ class AddShotVC: BaseVC {
         coffeinIn100Label.text = Formatter.formatMg(coffee.coffeineMgIn100ml)
         volume = coffee.smallMl
         updateVolume()
+        updateCoffeinInside()
     }
 
     private func updateCoffeinInside() {
