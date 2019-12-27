@@ -43,6 +43,10 @@ class ShotsCMSVC: BaseTableVC {
                 shotsInDay.append(shot)
             }
 
+            if !shotsInDay.isEmpty, let date = lastDate {
+                sections.append(CMSShotSection(name: Formatter.formatCMSSectionDate(date), shots: shotsInDay))
+            }
+
         } catch {
             print(error)
         }
