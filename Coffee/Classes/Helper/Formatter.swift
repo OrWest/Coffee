@@ -9,6 +9,13 @@
 import Foundation
 
 class Formatter {
+    private static let cmsSectionDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter
+    }()
+
     static func formatMg(_ value: Int) -> String {
         return "\(value) mg"
     }
@@ -19,5 +26,9 @@ class Formatter {
 
     static func formatPercent(_ value: Int) -> String {
         return "\(value)%"
+    }
+
+    static func formatCMSSectionDate(_ date: Date) -> String {
+        return cmsSectionDateFormatter.string(from: date)
     }
 }
