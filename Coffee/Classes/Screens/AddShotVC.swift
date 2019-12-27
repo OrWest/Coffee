@@ -18,11 +18,13 @@ class AddShotVC: BaseVC {
     @IBOutlet weak var sizeSegmented: UISegmentedControl!
     @IBOutlet weak var volumeField: UITextField!
     @IBOutlet weak var coffeinInsideLabel: UILabel!
-    
+    @IBOutlet weak var volumeMaxLabel: UILabel!
+
     @IBOutlet weak var imageContainerView: UIView!
     @IBOutlet weak var contentContainerView: UIView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var darkView: UIView!
+    @IBOutlet weak var contentView: UIView!
     
     weak var transition: MainToAddShotTransition?
 
@@ -37,8 +39,7 @@ class AddShotVC: BaseVC {
 
         coffeinIn100Label.text = Formatter.formatMg(coffee.coffeineMgIn100ml)
         volume = coffee.smallMl
-        updateVolume()
-        updateCoffeinInside()
+        updateCoffeinAndVolume()
     }
 
     private func updateCoffeinInside() {
@@ -51,6 +52,25 @@ class AddShotVC: BaseVC {
         volumeField.text = Formatter.formatMl(volume)
     }
 
+    private func updateCoffeinAndVolume() {
+        updateVolume()
+        updateCoffeinInside()
+    }
+
+    private func updateSegmentedValue() {
+        let index: Int?
+        switch volume {
+        case coffee.smallMl:
+            index = 0
+        case coffee.largeMl:
+            index = 1
+        default:
+            index = nil
+        }
+
+        sizeSegmented.selectedSegmentIndex = index ?? UISegmentedControl.noSegment
+    }
+
     @IBAction func sizeSegmentedAction(_ sender: Any) {
         switch sizeSegmented.selectedSegmentIndex {
         case 0: // small
@@ -61,8 +81,7 @@ class AddShotVC: BaseVC {
             assertionFailure()
         }
 
-        updateVolume()
-        updateCoffeinInside()
+        updateCoffeinAndVolume()
     }
 
     @IBAction func addAction(_ sender: Any) {
@@ -87,4 +106,63 @@ class AddShotVC: BaseVC {
     @IBAction func closeAction(_ sender: Any) {
         dismiss(animated: true)
     }
+
+    @IBAction func backgroundTapAction(_ sender: Any) {
+        if volumeField.isEditing {
+            volumeField.resignFirstResponder()
+        } else {
+            dismiss(animated: true)
+        }
+    }
+
+    @IBAction func volumeFieldChanged(_ textField: UITextField) {
+        if let text = textField.text, let newValue = Int(text) {
+            if newValue > 10000 {
+                volumeMaxLabel.textColor = .red
+                textField.text = String(volume)
+
+                textField.transform = CGAffineTransform(translationX: -5, y: 0)
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.25, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                    textField.transform = .identity
+                }, completion: nil)
+            } else {
+                volumeMaxLabel.textColor = .lightGray
+                volume = newValue
+            }
+        }
+
+        updateCoffeinInside()
+    }
+}
+
+extension AddShotVC: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = String(volume)
+
+        UIView.animate(withDuration: 0.3) { [unowned self] in
+            self.contentView.transform = CGAffineTransform(translationX: 0, y: -100)
+        }
+
+        sizeSegmented.isEnabled = false
+        volumeMaxLabel.isHidden = false
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.3) { [unowned self] in
+            self.contentView.transform = .identity
+        }
+
+        updateCoffeinAndVolume()
+        updateSegmentedValue()
+        sizeSegmented.isEnabled = true
+        volumeMaxLabel.isHidden = true
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+        let allowedCharacters = CharacterSet.decimalDigits
+        let characterSet = CharacterSet(charactersIn: string)
+        return allowedCharacters.isSuperset(of: characterSet)
+    }
+
 }

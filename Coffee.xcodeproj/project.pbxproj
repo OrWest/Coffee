@@ -208,11 +208,11 @@
 		9735187E239D8AEB0028A58D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A754178023B5F94200F4D7A0 /* CMS */,
 				973B0B3323A54B6A00F2CCD4 /* Main */,
 				97351885239D8B630028A58D /* StatisticsVC.swift */,
 				97351887239D8B6A0028A58D /* SettingsVC.swift */,
 				A766DB2B23B20DF4001E0A25 /* AddShotVC.swift */,
-				A754178023B5F94200F4D7A0 /* CMS */,
 				9735185C239D841C0028A58D /* Main.storyboard */,
 			);
 			path = Screens;
