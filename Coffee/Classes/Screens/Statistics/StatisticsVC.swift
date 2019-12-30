@@ -7,7 +7,13 @@
 //
 
 import UIKit
+import SwiftUI
 
 class StatisticsVC: BaseVC {
+
+    @IBSegueAction func addSwiftUI(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: GeneralStaatisticsView())
+    }
+
 
 }

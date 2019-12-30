@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,8 @@
 		A73A949123B4C27F00950199 /* MainToAddShotTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A949023B4C27F00950199 /* MainToAddShotTransition.swift */; };
 		A73A949323B4C30D00950199 /* OpenAddShotAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A949223B4C30D00950199 /* OpenAddShotAnimator.swift */; };
 		A73A949523B4EA3A00950199 /* CloseAddShotAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A949423B4EA3A00950199 /* CloseAddShotAnimator.swift */; };
+		A73AB7C823B9EC4C00274718 /* GeneralStaatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73AB7C723B9EC4C00274718 /* GeneralStaatisticsView.swift */; };
+		A73AB7CB23B9EC8900274718 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = A73AB7CA23B9EC8900274718 /* SwiftUICharts */; };
 		A754178223B5F99C00F4D7A0 /* CMSShotSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754178123B5F99C00F4D7A0 /* CMSShotSection.swift */; };
 		A762DC8923B6018800246692 /* CMSShotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762DC8823B6018800246692 /* CMSShotCell.swift */; };
 		A762DCAB23B6203800246692 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762DCAA23B6203800246692 /* SceneDelegate.swift */; };
@@ -99,6 +101,7 @@
 		A73A949023B4C27F00950199 /* MainToAddShotTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToAddShotTransition.swift; sourceTree = "<group>"; };
 		A73A949223B4C30D00950199 /* OpenAddShotAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAddShotAnimator.swift; sourceTree = "<group>"; };
 		A73A949423B4EA3A00950199 /* CloseAddShotAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseAddShotAnimator.swift; sourceTree = "<group>"; };
+		A73AB7C723B9EC4C00274718 /* GeneralStaatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralStaatisticsView.swift; sourceTree = "<group>"; };
 		A754178123B5F99C00F4D7A0 /* CMSShotSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSShotSection.swift; sourceTree = "<group>"; };
 		A762DC8823B6018800246692 /* CMSShotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSShotCell.swift; sourceTree = "<group>"; };
 		A762DCAA23B6203800246692 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A9A3E8A80A29A119007B8F6 /* Pods_Coffee.framework in Frameworks */,
+				A73AB7CB23B9EC8900274718 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +215,9 @@
 		9735187E239D8AEB0028A58D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A7F27BEB23B9EB7700D761D8 /* Statistics */,
 				A754178023B5F94200F4D7A0 /* CMS */,
 				973B0B3323A54B6A00F2CCD4 /* Main */,
-				97351885239D8B630028A58D /* StatisticsVC.swift */,
 				97351887239D8B6A0028A58D /* SettingsVC.swift */,
 				A766DB2B23B20DF4001E0A25 /* AddShotVC.swift */,
 				9735185C239D841C0028A58D /* Main.storyboard */,
@@ -305,6 +309,15 @@
 			path = CMS;
 			sourceTree = "<group>";
 		};
+		A7F27BEB23B9EB7700D761D8 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				97351885239D8B630028A58D /* StatisticsVC.swift */,
+				A73AB7C723B9EC4C00274718 /* GeneralStaatisticsView.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,6 +337,9 @@
 			dependencies = (
 			);
 			name = Coffee;
+			packageProductDependencies = (
+				A73AB7CA23B9EC8900274718 /* SwiftUICharts */,
+			);
 			productName = Coffee;
 			productReference = 97351853239D841C0028A58D /* Coffee.app */;
 			productType = "com.apple.product-type.application";
@@ -375,6 +391,9 @@
 				Base,
 			);
 			mainGroup = 9735184A239D841C0028A58D;
+			packageReferences = (
+				A73AB7C923B9EC8900274718 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 97351854239D841C0028A58D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -494,6 +513,7 @@
 				973B0B3023A5494F00F2CCD4 /* LNZInfiniteCollectionViewLayout.swift in Sources */,
 				97351884239D8B580028A58D /* MainVC.swift in Sources */,
 				97351882239D8B2D0028A58D /* BaseVC.swift in Sources */,
+				A73AB7C823B9EC4C00274718 /* GeneralStaatisticsView.swift in Sources */,
 				97351888239D8B6A0028A58D /* SettingsVC.swift in Sources */,
 				A754178223B5F99C00F4D7A0 /* CMSShotSection.swift in Sources */,
 				9711116B23A5507C00144C72 /* Coffee.swift in Sources */,
@@ -776,6 +796,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A73AB7C923B9EC8900274718 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A73AB7CA23B9EC8900274718 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A73AB7C923B9EC8900274718 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9735184B239D841C0028A58D /* Project object */;
 }
