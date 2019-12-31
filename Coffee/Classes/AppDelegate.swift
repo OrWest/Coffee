@@ -24,6 +24,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func initializeServices() {
         FirebaseApp.configure()
 
+        configureRealm()
+    }
+    
+    private func configureRealm() {
+        
+        #if DEBUG
+        var config = Realm.Configuration()
+
+        // Use the default directory, but replace the filename with the username
+        config.fileURL = URL(fileURLWithPath: "/Users/Motor/Documents/Coffee/default.realm")
+
+        // Set this as the configuration used for the default Realm
+        Realm.Configuration.defaultConfiguration = config
+        #endif
+        
         addCoffee()
     }
 
