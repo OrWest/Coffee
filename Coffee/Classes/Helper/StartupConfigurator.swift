@@ -12,7 +12,7 @@ import FirebaseStorage
 class StartupConfigurator {
     private let storageRef = Storage.storage().reference(withPath: "startup-coffee-info.json")
 
-    func downloadStartupInfo(_ completion: (Result<[Coffee], Error>) -> Void) {
+    func downloadStartupInfo(_ completion: (Result<[CoffeeInfo], Error>) -> Void) {
 
         // 1 MB (2^16)
 //        storageRef.getData(maxSize: 2 << 16) { data, error in

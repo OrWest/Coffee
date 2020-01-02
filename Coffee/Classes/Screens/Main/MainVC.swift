@@ -22,7 +22,7 @@ class MainVC: BaseVC {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var activityContainerView: UIView!
 
-    private let coffeeList = try! Realm().objects(Coffee.self)
+    private let coffeeList = try! Realm().objects(CoffeeInfo.self)
     private let todayShotsList = try! Realm().objects(CoffeeShot.self).filter("date >= %@", Date().dateAtStartOf(.day))
     private var todayShotsToken: NotificationToken?
     private let coffeeRate = CoffeeRate()

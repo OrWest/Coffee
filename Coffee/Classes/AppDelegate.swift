@@ -46,21 +46,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             let realm = try Realm()
 
-            guard realm.objects(Coffee.self).count == 0 else { return }
+            guard realm.objects(CoffeeInfo.self).count == 0 else { return }
 
-            let cappuccino = Coffee()
+            let cappuccino = CoffeeInfo()
             cappuccino.name = "Cappuccino"
             cappuccino.smallMl = 120
             cappuccino.largeMl = 240
             cappuccino.coffeineMgIn100ml = 60
 
-            let latte = Coffee()
+            let latte = CoffeeInfo()
             latte.name = "Latte"
             latte.smallMl = 180
             latte.largeMl = 260
             latte.coffeineMgIn100ml = 44
 
-            let espresso = Coffee()
+            let espresso = CoffeeInfo()
             espresso.name = "Espresso"
             espresso.smallMl = 60
             espresso.largeMl = 120

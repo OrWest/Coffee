@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4FDB0DB5841D918640AE2F16 /* Pods_CoffeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BB4AADCA0D94062FBE6A70 /* Pods_CoffeeTests.framework */; };
 		8A9A3E8A80A29A119007B8F6 /* Pods_Coffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1089271304224336279D2CBA /* Pods_Coffee.framework */; };
-		9711116B23A5507C00144C72 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711116A23A5507C00144C72 /* Coffee.swift */; };
+		9711116B23A5507C00144C72 /* CoffeeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711116A23A5507C00144C72 /* CoffeeInfo.swift */; };
 		9711116D23A5518800144C72 /* CoffeeShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711116C23A5518800144C72 /* CoffeeShot.swift */; };
 		9711119723A55D0800144C72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9711119623A55D0800144C72 /* GoogleService-Info.plist */; };
 		97351857239D841C0028A58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97351856239D841C0028A58D /* AppDelegate.swift */; };
@@ -71,7 +71,7 @@
 		3983CD09CF07F9EE60844B38 /* Pods-CoffeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTests.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeTests/Pods-CoffeeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		73BB4AADCA0D94062FBE6A70 /* Pods_CoffeeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1BA6B2DB25DD9FCD61F19E /* Pods-Coffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee.debug.xcconfig"; path = "Target Support Files/Pods-Coffee/Pods-Coffee.debug.xcconfig"; sourceTree = "<group>"; };
-		9711116A23A5507C00144C72 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		9711116A23A5507C00144C72 /* CoffeeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeInfo.swift; sourceTree = "<group>"; };
 		9711116C23A5518800144C72 /* CoffeeShot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShot.swift; sourceTree = "<group>"; };
 		9711118E23A55A6E00144C72 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9711119023A55A7500144C72 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -136,7 +136,7 @@
 		9711116923A5507300144C72 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9711116A23A5507C00144C72 /* Coffee.swift */,
+				9711116A23A5507C00144C72 /* CoffeeInfo.swift */,
 				9711116C23A5518800144C72 /* CoffeeShot.swift */,
 			);
 			path = Models;
@@ -518,7 +518,7 @@
 				A73AB7C823B9EC4C00274718 /* GeneralStatisticsView.swift in Sources */,
 				97351888239D8B6A0028A58D /* SettingsVC.swift in Sources */,
 				A754178223B5F99C00F4D7A0 /* CMSShotSection.swift in Sources */,
-				9711116B23A5507C00144C72 /* Coffee.swift in Sources */,
+				9711116B23A5507C00144C72 /* CoffeeInfo.swift in Sources */,
 				A73A948D23B4AC8300950199 /* CoffeeRate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

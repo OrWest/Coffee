@@ -28,7 +28,7 @@ class AddShotVC: BaseVC {
     
     weak var transition: MainToAddShotTransition?
 
-    var coffee: Coffee!
+    var coffee: CoffeeInfo!
     private var volume: Int!
 
     override func viewDidLoad() {

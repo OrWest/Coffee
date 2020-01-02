@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class CoffeeShot: Object {
-    @objc dynamic var coffee: Coffee!
+    @objc dynamic var coffee: CoffeeInfo!
     @objc dynamic var ml: Int = 0
     @objc dynamic var date: Date!
 

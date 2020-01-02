@@ -1,5 +1,5 @@
 //
-//  Coffee.swift
+//  CoffeeInfo.swift
 //  Coffee
 //
 //  Created by Alex Motor on 12/14/19.
@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Coffee: Object {
+class CoffeeInfo: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var smallMl: Int = 0
     @objc dynamic var largeMl: Int = 0
