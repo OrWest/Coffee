@@ -14,8 +14,8 @@ class CoffeeShot: Object {
     @objc dynamic var ml: Int = 0
     @objc dynamic var date: Date!
 
-    var coffeinInside: Int {
-        let value = Double(coffee.coffeineMgIn100ml * ml) / 100.0
+    var caffeinInside: Int {
+        let value = Double(coffee.caffeineMgIn100ml * ml) / 100.0
         return Int(value.rounded(.down))
     }
 }

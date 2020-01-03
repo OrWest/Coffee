@@ -14,10 +14,10 @@ class AddShotVC: BaseVC {
 
     @IBOutlet weak var coffeeImageView: UIImageView!
     @IBOutlet weak var coffeeLabel: UILabel!
-    @IBOutlet weak var coffeinIn100Label: UILabel!
+    @IBOutlet weak var caffeinIn100Label: UILabel!
     @IBOutlet weak var sizeSegmented: UISegmentedControl!
     @IBOutlet weak var volumeField: UITextField!
-    @IBOutlet weak var coffeinInsideLabel: UILabel!
+    @IBOutlet weak var caffeinInsideLabel: UILabel!
     @IBOutlet weak var volumeMaxLabel: UILabel!
 
     @IBOutlet weak var imageContainerView: UIView!
@@ -37,24 +37,24 @@ class AddShotVC: BaseVC {
         coffeeLabel.text = coffee.name
         coffeeImageView.image = coffee.image
 
-        coffeinIn100Label.text = Formatter.formatMg(coffee.coffeineMgIn100ml)
+        caffeinIn100Label.text = Formatter.formatMg(coffee.caffeineMgIn100ml)
         volume = coffee.smallMl
-        updateCoffeinAndVolume()
+        updatecaffeinAndVolume()
     }
 
-    private func updateCoffeinInside() {
-        let value = Float(volume) / 100 * Float(coffee.coffeineMgIn100ml)
+    private func updatecaffeinInside() {
+        let value = Float(volume) / 100 * Float(coffee.caffeineMgIn100ml)
         let roundValue = Int(value.rounded(.down))
-        coffeinInsideLabel.text = Formatter.formatMg(roundValue)
+        caffeinInsideLabel.text = Formatter.formatMg(roundValue)
     }
 
     private func updateVolume() {
         volumeField.text = Formatter.formatMl(volume)
     }
 
-    private func updateCoffeinAndVolume() {
+    private func updatecaffeinAndVolume() {
         updateVolume()
-        updateCoffeinInside()
+        updatecaffeinInside()
     }
 
     private func updateSegmentedValue() {
@@ -81,7 +81,7 @@ class AddShotVC: BaseVC {
             assertionFailure()
         }
 
-        updateCoffeinAndVolume()
+        updatecaffeinAndVolume()
     }
 
     @IBAction func addAction(_ sender: Any) {
@@ -131,7 +131,7 @@ class AddShotVC: BaseVC {
             }
         }
 
-        updateCoffeinInside()
+        updatecaffeinInside()
     }
 }
 
@@ -152,7 +152,7 @@ extension AddShotVC: UITextFieldDelegate {
             self.contentView.transform = .identity
         }
 
-        updateCoffeinAndVolume()
+        updatecaffeinAndVolume()
         updateSegmentedValue()
         sizeSegmented.isEnabled = true
         volumeMaxLabel.isHidden = true

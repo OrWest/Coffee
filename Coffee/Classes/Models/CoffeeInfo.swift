@@ -13,7 +13,7 @@ class CoffeeInfo: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var smallMl: Int = 0
     @objc dynamic var largeMl: Int = 0
-    @objc dynamic var coffeineMgIn100ml: Int = 0
+    @objc dynamic var caffeineMgIn100ml: Int = 0
 
     lazy var image: UIImage? = UIImage(named: "drink_" + name.lowercased())
 

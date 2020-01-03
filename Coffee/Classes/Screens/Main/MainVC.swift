@@ -69,7 +69,7 @@ class MainVC: BaseVC {
 
     private func coffeeConsumedInPercent() -> Double {
         let rate = Double(coffeeRate.rateInMg)
-        let consumed = todayShotsList.map { Double($0.coffee.coffeineMgIn100ml * $0.ml) / 100.0 }.reduce(0, +)
+        let consumed = todayShotsList.map { Double($0.coffee.caffeineMgIn100ml * $0.ml) / 100.0 }.reduce(0, +)
 
         return consumed / rate
     }

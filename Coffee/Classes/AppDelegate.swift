@@ -30,13 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func configureRealm() {
         
         #if DEBUG
-        var config = Realm.Configuration()
-
-        // Use the default directory, but replace the filename with the username
-        config.fileURL = URL(fileURLWithPath: "/Users/Motor/Documents/Coffee/default.realm")
-
-        // Set this as the configuration used for the default Realm
-        Realm.Configuration.defaultConfiguration = config
+//        var config = Realm.Configuration()
+//
+//        // Use the default directory, but replace the filename with the username
+//        config.fileURL = URL(fileURLWithPath: "/Users/Motor/Documents/Coffee/default.realm")
+//
+//        // Set this as the configuration used for the default Realm
+//        Realm.Configuration.defaultConfiguration = config
         #endif
         
         addCoffee()
@@ -52,19 +52,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             cappuccino.name = "Cappuccino"
             cappuccino.smallMl = 120
             cappuccino.largeMl = 240
-            cappuccino.coffeineMgIn100ml = 60
+            cappuccino.caffeineMgIn100ml = 60
 
             let latte = CoffeeInfo()
             latte.name = "Latte"
             latte.smallMl = 180
             latte.largeMl = 260
-            latte.coffeineMgIn100ml = 44
+            latte.caffeineMgIn100ml = 44
 
             let espresso = CoffeeInfo()
             espresso.name = "Espresso"
             espresso.smallMl = 60
             espresso.largeMl = 120
-            espresso.coffeineMgIn100ml = 89
+            espresso.caffeineMgIn100ml = 89
 
             try realm.write {
                 realm.add([cappuccino, latte, espresso])
