@@ -25,7 +25,7 @@ class MainVC: BaseVC {
     private let coffeeList = try! Realm().objects(CoffeeInfo.self)
     private let todayShotsList = try! Realm().objects(CoffeeShot.self).filter("date >= %@", Date().dateAtStartOf(.day))
     private var todayShotsToken: NotificationToken?
-    private let coffeeRate = CoffeeRate()
+    private let coffeeRate = CoffeeRate.default
 
     private var addShotTransition: MainToAddShotTransition?
 
@@ -36,6 +36,7 @@ class MainVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        coffeeRate.delegate = self
         prepareActivity()
     }
 

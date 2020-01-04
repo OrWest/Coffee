@@ -13,6 +13,7 @@ protocol CoffeeRateDelegate: class {
 }
 
 class CoffeeRate {
+    static let `default` = CoffeeRate()
     private let rateKey = "coffeeRate"
 
     weak var delegate: CoffeeRateDelegate?
@@ -24,7 +25,7 @@ class CoffeeRate {
         }
     }
 
-    init() {
+    private init() {
         self.rateInMg = UserDefaults.standard.value(forKey: rateKey) as? Int ?? 500
     }
 

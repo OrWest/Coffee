@@ -26,6 +26,7 @@
 		973B0B3523A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B0B3423A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift */; };
 		975FD40623BF5A2F003A7C30 /* CoffeeDrinkStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975FD40523BF5A2F003A7C30 /* CoffeeDrinkStatisticsView.swift */; };
 		975FD40823BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975FD40723BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift */; };
+		97B8B15623C0B5FC001E7D64 /* DailyCaffeineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B8B15523C0B5FC001E7D64 /* DailyCaffeineView.swift */; };
 		A700155B23BF416000606EF0 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155A23BF416000606EF0 /* StatisticsView.swift */; };
 		A700155D23BF423C00606EF0 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155C23BF423C00606EF0 /* StatisticsVC.swift */; };
 		A700155F23BF4B5700606EF0 /* StatisticsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155E23BF4B5700606EF0 /* StatisticsData.swift */; };
@@ -101,6 +102,7 @@
 		973B0B3423A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionViewCell.swift; sourceTree = "<group>"; };
 		975FD40523BF5A2F003A7C30 /* CoffeeDrinkStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDrinkStatisticsView.swift; sourceTree = "<group>"; };
 		975FD40723BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDrinkVerticalCapsule.swift; sourceTree = "<group>"; };
+		97B8B15523C0B5FC001E7D64 /* DailyCaffeineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCaffeineView.swift; sourceTree = "<group>"; };
 		A700155A23BF416000606EF0 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		A700155C23BF423C00606EF0 /* StatisticsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		A700155E23BF4B5700606EF0 /* StatisticsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsData.swift; sourceTree = "<group>"; };
@@ -222,10 +224,10 @@
 		9735187E239D8AEB0028A58D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				97B8B15423C0B5C1001E7D64 /* Settings */,
 				A7F27BEB23B9EB7700D761D8 /* Statistics */,
 				A754178023B5F94200F4D7A0 /* CMS */,
 				973B0B3323A54B6A00F2CCD4 /* Main */,
-				97351887239D8B6A0028A58D /* SettingsVC.swift */,
 				A766DB2B23B20DF4001E0A25 /* AddShotVC.swift */,
 				9735185C239D841C0028A58D /* Main.storyboard */,
 			);
@@ -284,6 +286,15 @@
 				973B0B3423A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		97B8B15423C0B5C1001E7D64 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				97351887239D8B6A0028A58D /* SettingsVC.swift */,
+				97B8B15523C0B5FC001E7D64 /* DailyCaffeineView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		A1479284F3DC20789663DA3B /* Pods */ = {
@@ -514,6 +525,7 @@
 				A73A949323B4C30D00950199 /* OpenAddShotAnimator.swift in Sources */,
 				975FD40823BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift in Sources */,
 				A73A949123B4C27F00950199 /* MainToAddShotTransition.swift in Sources */,
+				97B8B15623C0B5FC001E7D64 /* DailyCaffeineView.swift in Sources */,
 				A762DCAB23B6203800246692 /* SceneDelegate.swift in Sources */,
 				A766DB2C23B20DF4001E0A25 /* AddShotVC.swift in Sources */,
 				A73A949523B4EA3A00950199 /* CloseAddShotAnimator.swift in Sources */,

@@ -11,7 +11,6 @@
         <!--Statistics-->
         <scene sceneID="Re5-d6-PR7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iJO-CN-vEb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="qET-ah-0zT" customClass="StatisticsVC" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CEm-5A-Yjs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -35,14 +34,15 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Statistics" image="tabs_statistics_not_active" selectedImage="tabs_statistics_active" id="qaY-5K-3rZ"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJO-CN-vEb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-112.8" y="-220.83958020989508"/>
         </scene>
         <!--Hosting Controller-->
         <scene sceneID="QmV-eW-cuq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Idb-Kj-OLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <hostingController id="k5Q-0R-nYH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Idb-Kj-OLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="630" y="-221"/>
         </scene>
@@ -101,6 +101,30 @@
                                             <segue destination="1dH-qF-5gu" kind="show" id="SoD-wn-KVO"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="f82-o1-KjE" detailTextLabel="xEg-9b-eZd" style="IBUITableViewCellStyleValue1" id="GAf-wj-Crc">
+                                        <rect key="frame" x="0.0" y="61.5" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GAf-wj-Crc" id="fOp-kL-gis">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Daily caffeine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f82-o1-KjE">
+                                                    <rect key="frame" x="16" y="12" width="103.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="mg" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xEg-9b-eZd">
+                                                    <rect key="frame" x="334.5" y="12" width="24.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -111,6 +135,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="A9c-38-ibh"/>
                     <connections>
+                        <outlet property="currentDailyCaffeineMg" destination="xEg-9b-eZd" id="tb8-va-ilI"/>
                         <outlet property="shotCountLabel" destination="uge-Ot-8zH" id="L0h-bV-olH"/>
                     </connections>
                 </tableViewController>
