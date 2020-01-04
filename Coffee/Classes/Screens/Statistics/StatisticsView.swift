@@ -27,10 +27,14 @@ struct StatisticsView: View {
                     Text("\(Formatter.formatMg(data.averageCaffeinPerDay)) per day")
                 }
 
-                CoffeeDrinkStatisticsView()
-                    .frame(height: 200)
-                    .padding()
-
+                ZStack {
+                    RoundedRectangle(cornerRadius: 15)
+                        .fill(Color(white: 0.95))
+                    CoffeeDrinkStatisticsView()
+                        .frame(height: 200)
+                        .padding()
+                }
+                .padding()
                 Spacer()
             }
             .navigationBarTitle("Statistics")
@@ -42,11 +46,11 @@ struct StatisticsView_Previews: PreviewProvider {
     static var previews: some View {
         StatisticsView()
         .environmentObject(StatisticsData(coffeeDrinks: [
-            (id: 1, 1.0, Image("coffee")),
-            (id: 2, 0.8, Image("coffee")),
-            (id: 3, 0.5, Image("coffee")),
-            (id: 4, 0.2, Image("coffee")),
-            (id: 5, 0.1, Image("coffee"))
+            (id: 1, percent: 1.0, count: 10, Image("coffee")),
+            (id: 2, percent: 0.8, count: 8, Image("coffee")),
+            (id: 3, percent: 0.5, count: 5, Image("coffee")),
+            (id: 4, percent: 0.4, count: 4, Image("coffee")),
+            (id: 5, percent: 0.1, count: 1, Image("coffee"))
         ]))
     }
 }

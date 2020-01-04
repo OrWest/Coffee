@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CoffeeDrinkVerticalCapsule: View {
     var height: CGFloat
-    @State var percent: CGFloat = 1.0
+    @State var value: (percent: CGFloat, count: Int) = (0, 0)
     var image: Image
     
     var body: some View {
@@ -18,8 +18,8 @@ struct CoffeeDrinkVerticalCapsule: View {
             Spacer()
             Capsule()
                 .fill(Color.pink)
-                .frame(width: 30.0, height: percent * (height - 80), alignment: .bottom)
-            Text(Formatter.formatPercent(Int(percent * 100)))
+                .frame(width: 30.0, height: value.percent * (height - 80), alignment: .bottom)
+            Text(String(value.count))
                 .padding(.bottom, 5)
                 .padding(.top, 5)
             image
@@ -32,7 +32,7 @@ struct CoffeeDrinkVerticalCapsule: View {
 
 struct CoffeeDrinkVerticalCapsule_Previews: PreviewProvider {
     static var previews: some View {
-        CoffeeDrinkVerticalCapsule(height: 250, percent: 1.0, image: Image("coffee"))
+        CoffeeDrinkVerticalCapsule(height: 250, value: (0.9, 9), image: Image("coffee"))
             .previewLayout(.fixed(width: 50, height: 250))
     }
 }

@@ -62,6 +62,7 @@ class StatisticsVC: BaseVC {
             let stat = (
                 id: i,
                 percent: CGFloat(value) / CGFloat(sum),
+                count: value,
                 image: Image(uiImage: coffee.image ?? UIImage(named: "coffee")!)
             )
             statisticsData.coffeeDrinks.append(stat)
