@@ -30,6 +30,15 @@ class StatisticsVC: BaseVC {
     private func calculateStatisitcs() {
         calculateAvarageCaffeinPerDay()
         calculateDrinkStatistics()
+        calculateTotals()
+    }
+    
+    private func calculateTotals() {
+        let totalMl = shots.map { $0.ml }.reduce(0, +)
+        let totalCaffein = shots.map { $0.caffeinInside }.reduce(0, +)
+        
+        statisticsData.totalMl = totalMl
+        statisticsData.totalCoffein = totalCaffein
     }
 
     private func calculateAvarageCaffeinPerDay() {

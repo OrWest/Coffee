@@ -35,12 +35,27 @@ struct StatisticsView: View {
                     RoundedRectangle(cornerRadius: 15)
                         .fill(Color(white: 0.95))
                     CoffeeDrinkStatisticsView()
+                        .environmentObject(data)
                         .frame(height: 200)
                         .padding()
                 }
                 .padding()
                 
-                Spacer()
+                VStack {
+                    HStack {
+                        Text("Total coffee: \(Formatter.formatMl(data.totalMl))")
+                            .font(.headline)
+                        Spacer()
+                    }
+                    HStack {
+                        Text("Total caffein: \(Formatter.formatMg(data.totalCoffein))")
+                            .font(.headline)
+                        Spacer()
+                    }
+                }
+                .padding()
+                
+                Spacer()                
             }
             .navigationBarTitle("Statistics")
         }
@@ -57,5 +72,6 @@ struct StatisticsView_Previews: PreviewProvider {
             (id: 4, percent: 0.4, count: 4, Image("coffee")),
             (id: 5, percent: 0.1, count: 1, Image("coffee"))
         ]))
+        .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
     }
 }

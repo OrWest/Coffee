@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CoffeeDrinkVerticalCapsule: View {
     var height: CGFloat
-    @State var value: (percent: CGFloat, count: Int) = (0, 0)
+    var value: (percent: CGFloat, count: Int) = (0, 0)
     var image: Image
     
     var body: some View {
