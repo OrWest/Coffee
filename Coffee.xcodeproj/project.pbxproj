@@ -24,6 +24,8 @@
 		973B0B3023A5494F00F2CCD4 /* LNZInfiniteCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B0B2F23A5494F00F2CCD4 /* LNZInfiniteCollectionViewLayout.swift */; };
 		973B0B3223A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B0B3123A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift */; };
 		973B0B3523A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B0B3423A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift */; };
+		975FD40623BF5A2F003A7C30 /* CoffeeDrinkStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975FD40523BF5A2F003A7C30 /* CoffeeDrinkStatisticsView.swift */; };
+		975FD40823BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975FD40723BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift */; };
 		A700155B23BF416000606EF0 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155A23BF416000606EF0 /* StatisticsView.swift */; };
 		A700155D23BF423C00606EF0 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155C23BF423C00606EF0 /* StatisticsVC.swift */; };
 		A700155F23BF4B5700606EF0 /* StatisticsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155E23BF4B5700606EF0 /* StatisticsData.swift */; };
@@ -97,6 +99,8 @@
 		973B0B2F23A5494F00F2CCD4 /* LNZInfiniteCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNZInfiniteCollectionViewLayout.swift; sourceTree = "<group>"; };
 		973B0B3123A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNZSnapToCenterCollectionViewLayout.swift; sourceTree = "<group>"; };
 		973B0B3423A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionViewCell.swift; sourceTree = "<group>"; };
+		975FD40523BF5A2F003A7C30 /* CoffeeDrinkStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDrinkStatisticsView.swift; sourceTree = "<group>"; };
+		975FD40723BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDrinkVerticalCapsule.swift; sourceTree = "<group>"; };
 		A700155A23BF416000606EF0 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		A700155C23BF423C00606EF0 /* StatisticsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		A700155E23BF4B5700606EF0 /* StatisticsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsData.swift; sourceTree = "<group>"; };
@@ -319,6 +323,8 @@
 				A700155C23BF423C00606EF0 /* StatisticsVC.swift */,
 				A700155A23BF416000606EF0 /* StatisticsView.swift */,
 				A700155E23BF4B5700606EF0 /* StatisticsData.swift */,
+				975FD40523BF5A2F003A7C30 /* CoffeeDrinkStatisticsView.swift */,
+				975FD40723BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -506,6 +512,7 @@
 				A766DB3323B249C2001E0A25 /* ShotsCMSVC.swift in Sources */,
 				A766DB2E23B2370C001E0A25 /* Formatter.swift in Sources */,
 				A73A949323B4C30D00950199 /* OpenAddShotAnimator.swift in Sources */,
+				975FD40823BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift in Sources */,
 				A73A949123B4C27F00950199 /* MainToAddShotTransition.swift in Sources */,
 				A762DCAB23B6203800246692 /* SceneDelegate.swift in Sources */,
 				A766DB2C23B20DF4001E0A25 /* AddShotVC.swift in Sources */,
@@ -513,6 +520,7 @@
 				973B0B2D23A548F800F2CCD4 /* LNZCarouselCollectionViewLayout.swift in Sources */,
 				A762DC8923B6018800246692 /* CMSShotCell.swift in Sources */,
 				A700155F23BF4B5700606EF0 /* StatisticsData.swift in Sources */,
+				975FD40623BF5A2F003A7C30 /* CoffeeDrinkStatisticsView.swift in Sources */,
 				973B0B3223A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift in Sources */,
 				973B0B3523A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift in Sources */,
 				9711116D23A5518800144C72 /* CoffeeShot.swift in Sources */,

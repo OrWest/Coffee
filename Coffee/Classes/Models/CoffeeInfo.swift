@@ -23,5 +23,11 @@ class CoffeeInfo: Object {
             "imageForCell"
         ]
     }
+    
+    override func isEqual(_ object: Any?) -> Bool {
+        guard let second = object as? Self else { return false }
+        
+        return second.name == name
+    }
 }
 

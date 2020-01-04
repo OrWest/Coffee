@@ -20,27 +20,16 @@ struct StatisticsView: View {
                         Spacer()
                         Image("coffee")
                             .resizable()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 100, height: 100)
                         Spacer()
                     }
+                        .padding(.top, 20)
                     Text("\(Formatter.formatMg(data.averageCaffeinPerDay)) per day")
                 }
 
-                HStack {
-                    BarChartView(
-                        data: [8,23,54,32,12,37,7,23,43],
-                        title: "Title",
-                        form: ChartForm.small,
-                        dropShadow: true
-                    )
-                    Spacer()
-                    BarChartView(
-                        data: [8,23,54,32,12,37,7,23,43],
-                        title: "Title",
-                        form: ChartForm.small,
-                        dropShadow: true
-                    )
-                }.padding()
+                CoffeeDrinkStatisticsView()
+                    .frame(height: 200)
+                    .padding()
 
                 Spacer()
             }
@@ -52,5 +41,12 @@ struct StatisticsView: View {
 struct StatisticsView_Previews: PreviewProvider {
     static var previews: some View {
         StatisticsView()
+        .environmentObject(StatisticsData(coffeeDrinks: [
+            (id: 1, 1.0, Image("coffee")),
+            (id: 2, 0.8, Image("coffee")),
+            (id: 3, 0.5, Image("coffee")),
+            (id: 4, 0.2, Image("coffee")),
+            (id: 5, 0.1, Image("coffee"))
+        ]))
     }
 }

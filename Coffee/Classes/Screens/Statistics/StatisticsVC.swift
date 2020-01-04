@@ -29,6 +29,7 @@ class StatisticsVC: BaseVC {
 
     private func calculateStatisitcs() {
         calculateAvarageCaffeinPerDay()
+        calculateDrinkStatistics()
     }
 
     private func calculateAvarageCaffeinPerDay() {
@@ -41,6 +42,30 @@ class StatisticsVC: BaseVC {
         let daysCount = Set(shots.map { Formatter.formatCMSSectionDate($0.date) }).count
 
         statisticsData.averageCaffeinPerDay = sum / daysCount
+    }
+    
+    private func calculateDrinkStatistics() {
+        let allShots = shots.compactMap { $0.coffee }
+        
+        var drinkCount: [String: Int] = [:]
+
+        for shot in allShots {
+            drinkCount[shot.name] = (drinkCount[shot.name] ?? 0) + 1
+        }
+        
+        let ordered = drinkCount.map { $0 }.sorted { $0.value > $1.value }
+        let sum = ordered.map { $0.value }.reduce(0, +)
+        
+        statisticsData.coffeeDrinks.removeAll()
+        for (i, (key, value)) in ordered.enumerated() {
+            let coffee = allShots.first { $0.name == key }!
+            let stat = (
+                id: i,
+                percent: CGFloat(value) / CGFloat(sum),
+                image: Image(uiImage: coffee.image ?? UIImage(named: "coffee")!)
+            )
+            statisticsData.coffeeDrinks.append(stat)
+        }
     }
 
     @IBSegueAction func addSwiftUI(_ coder: NSCoder) -> UIViewController? {
