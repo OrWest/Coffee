@@ -26,7 +26,9 @@
 		973B0B3523A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B0B3423A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift */; };
 		975FD40623BF5A2F003A7C30 /* CoffeeDrinkStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975FD40523BF5A2F003A7C30 /* CoffeeDrinkStatisticsView.swift */; };
 		975FD40823BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975FD40723BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift */; };
+		978231B223C11D6900D00BC7 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978231B123C11D6900D00BC7 /* HealthManager.swift */; };
 		97B8B15623C0B5FC001E7D64 /* DailyCaffeineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B8B15523C0B5FC001E7D64 /* DailyCaffeineView.swift */; };
+		97C441D523C11CC600CA9FB3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C441D423C11CC600CA9FB3 /* HealthKit.framework */; };
 		A700155B23BF416000606EF0 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155A23BF416000606EF0 /* StatisticsView.swift */; };
 		A700155D23BF423C00606EF0 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155C23BF423C00606EF0 /* StatisticsVC.swift */; };
 		A700155F23BF4B5700606EF0 /* StatisticsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155E23BF4B5700606EF0 /* StatisticsData.swift */; };
@@ -102,7 +104,10 @@
 		973B0B3423A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionViewCell.swift; sourceTree = "<group>"; };
 		975FD40523BF5A2F003A7C30 /* CoffeeDrinkStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDrinkStatisticsView.swift; sourceTree = "<group>"; };
 		975FD40723BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDrinkVerticalCapsule.swift; sourceTree = "<group>"; };
+		978231B123C11D6900D00BC7 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		97B8B15523C0B5FC001E7D64 /* DailyCaffeineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCaffeineView.swift; sourceTree = "<group>"; };
+		97C441D323C11CC600CA9FB3 /* Coffee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coffee.entitlements; sourceTree = "<group>"; };
+		97C441D423C11CC600CA9FB3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		A700155A23BF416000606EF0 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		A700155C23BF423C00606EF0 /* StatisticsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		A700155E23BF4B5700606EF0 /* StatisticsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsData.swift; sourceTree = "<group>"; };
@@ -125,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C441D523C11CC600CA9FB3 /* HealthKit.framework in Frameworks */,
 				8A9A3E8A80A29A119007B8F6 /* Pods_Coffee.framework in Frameworks */,
 				A73AB7CB23B9EC8900274718 /* SwiftUICharts in Frameworks */,
 			);
@@ -173,6 +179,7 @@
 		97351855239D841C0028A58D /* Coffee */ = {
 			isa = PBXGroup;
 			children = (
+				97C441D323C11CC600CA9FB3 /* Coffee.entitlements */,
 				9735187D239D8ADA0028A58D /* Classes */,
 				9735187C239D8AD30028A58D /* Resources */,
 				9735187B239D88450028A58D /* Supporting files */,
@@ -246,6 +253,7 @@
 		973B0B2323A547F600F2CCD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97C441D423C11CC600CA9FB3 /* HealthKit.framework */,
 				9711119223A55A8000144C72 /* StoreKit.framework */,
 				9711119023A55A7500144C72 /* libc++.tbd */,
 				9711118E23A55A6E00144C72 /* libsqlite3.tbd */,
@@ -265,6 +273,7 @@
 				A766DB2D23B2370C001E0A25 /* Formatter.swift */,
 				A73A948C23B4AC8300950199 /* CoffeeRate.swift */,
 				A75AA95D23BA1EC30016DB08 /* StartupConfigurator.swift */,
+				978231B123C11D6900D00BC7 /* HealthManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -539,6 +548,7 @@
 				973B0B3023A5494F00F2CCD4 /* LNZInfiniteCollectionViewLayout.swift in Sources */,
 				A700155D23BF423C00606EF0 /* StatisticsVC.swift in Sources */,
 				97351884239D8B580028A58D /* MainVC.swift in Sources */,
+				978231B223C11D6900D00BC7 /* HealthManager.swift in Sources */,
 				97351882239D8B2D0028A58D /* BaseVC.swift in Sources */,
 				97351888239D8B6A0028A58D /* SettingsVC.swift in Sources */,
 				A754178223B5F99C00F4D7A0 /* CMSShotSection.swift in Sources */,
@@ -704,6 +714,7 @@
 			baseConfigurationReference = 8B1BA6B2DB25DD9FCD61F19E /* Pods-Coffee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Coffee/Coffee.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2FA6387WHP;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -727,6 +738,7 @@
 			baseConfigurationReference = 07E908EDC78227141B7ECF2F /* Pods-Coffee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Coffee/Coffee.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2FA6387WHP;
 				FRAMEWORK_SEARCH_PATHS = (

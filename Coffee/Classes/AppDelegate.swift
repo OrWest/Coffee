@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         configureRealm()
+        _ = HealthManager.shared
     }
     
     private func configureRealm() {

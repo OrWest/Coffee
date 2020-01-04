@@ -30,6 +30,7 @@ class AddShotVC: BaseVC {
 
     var coffee: CoffeeInfo!
     private var volume: Int!
+    private lazy var healthManager = HealthManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,11 +86,34 @@ class AddShotVC: BaseVC {
     }
 
     @IBAction func addAction(_ sender: Any) {
+        
         let shot = CoffeeShot()
         shot.coffee = coffee
         shot.ml = volume
         shot.date = Date()
-
+        
+        let addShowBlock = { [unowned self] in
+            self.addNewShot(shot)
+            self.transition?.addedNewShot = true
+            self.dismiss(animated: true)
+        }
+        
+        if case .shouldRequest = healthManager.status {
+            offerHealthShare {
+                DispatchQueue.main.async { [weak self] in
+                    self?.healthManager.addCaffeine(shot: shot)
+                    addShowBlock()
+                }
+            }
+        } else if case .granted = healthManager.status {
+            healthManager.addCaffeine(shot: shot)
+            addShowBlock()
+        } else {
+            addShowBlock()
+        }
+    }
+    
+    private func addNewShot(_ shot: CoffeeShot) {
         do {
             let realm = try Realm()
             try realm.write {
@@ -98,11 +122,26 @@ class AddShotVC: BaseVC {
         } catch {
             assertionFailure(error.localizedDescription)
         }
-
-        transition?.addedNewShot = true
-        dismiss(animated: true)
     }
 
+    private func offerHealthShare(completion: @escaping () -> Void) {
+        let alert = UIAlertController(title: "Health app", message: "Application can share caffeine consumption with your Health app. But need permitions first. Do you want to do this now?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default) { [unowned self] _ in
+            self.healthManager.requestAuthorization { error in
+                if let error = error {
+                    print(error)
+                }
+                completion()
+            }
+        })
+        alert.addAction(UIAlertAction(title: "Later", style: .cancel, handler: { [unowned self] _ in
+            self.healthManager.userDeclineHealthSharing()
+            completion()
+        }))
+        
+        present(alert, animated: true)
+    }
+    
     @IBAction func closeAction(_ sender: Any) {
         dismiss(animated: true)
     }
