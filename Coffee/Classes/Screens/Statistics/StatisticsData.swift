@@ -11,6 +11,8 @@ import Combine
 
 class StatisticsData: ObservableObject {
     @Published var averageCaffeinPerDay = 0
+    @Published var totalMl = 0
+    @Published var totalCoffein = 0
     @Published var coffeeDrinks: [(id: Int, percent: CGFloat, count: Int, image: Image)]
     
     init(coffeeDrinks: [(id: Int, percent: CGFloat, count: Int, image: Image)] = []) {

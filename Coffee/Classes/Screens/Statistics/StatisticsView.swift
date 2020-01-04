@@ -16,6 +16,10 @@ struct StatisticsView: View {
         NavigationView {
             ScrollView {
                 VStack {
+                    Text("Avarage caffein per day")
+                        .font(.headline)
+                        .padding(.top, 10)
+
                     HStack {
                         Spacer()
                         Image("coffee")
@@ -23,8 +27,8 @@ struct StatisticsView: View {
                             .frame(width: 100, height: 100)
                         Spacer()
                     }
-                        .padding(.top, 20)
-                    Text("\(Formatter.formatMg(data.averageCaffeinPerDay)) per day")
+                    Text("\(Formatter.formatMg(data.averageCaffeinPerDay))")
+                        .font(.title)
                 }
 
                 ZStack {
@@ -35,6 +39,7 @@ struct StatisticsView: View {
                         .padding()
                 }
                 .padding()
+                
                 Spacer()
             }
             .navigationBarTitle("Statistics")
