@@ -19,9 +19,7 @@ class HealthManager {
     }
     
     private let caffeineType = HKQuantityType.quantityType(forIdentifier: .dietaryCaffeine)!
-    private let weightType = HKQuantityType.quantityType(forIdentifier: .bodyMass)!
 
-    private var typesToRead: Set<HKQuantityType> { [weightType] }
     private var typesToWrite: Set<HKQuantityType> { [caffeineType] }
     
     private let UDHealthDeclinedByUserKey = "HealthInfoDeclinedByUser"
@@ -38,7 +36,7 @@ class HealthManager {
             self.status = .declined
         }
         
-        healthStore.getRequestStatusForAuthorization(toShare: typesToWrite, read: typesToRead) { status, error in
+        healthStore.getRequestStatusForAuthorization(toShare: typesToWrite, read: []) { status, error in
             switch status {
             case .unnecessary:
                 self.status = .granted
@@ -61,7 +59,7 @@ class HealthManager {
     }
     
     func requestAuthorization(completion: ((Error?) -> Void)? = nil) {
-        healthStore.requestAuthorization(toShare: typesToWrite, read: typesToRead) { [unowned self] granted, error in
+        healthStore.requestAuthorization(toShare: typesToWrite, read: []) { [unowned self] granted, error in
             if granted {
                 self.status = .granted
             }
