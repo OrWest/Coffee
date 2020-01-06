@@ -21,7 +21,7 @@ class MainVC: BaseVC {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var activityContainerView: UIView!
 
-    private let coffeeList = try! Realm().objects(CoffeeInfo.self)
+    private var coffeeList = Array(try! Realm().objects(CoffeeInfo.self))
     private let todayShotsList = try! Realm().objects(CoffeeShot.self).filter("date >= %@", Date().startOfDay())
     private var todayShotsToken: NotificationToken?
     private let coffeeRate = CoffeeRate.default
@@ -37,6 +37,17 @@ class MainVC: BaseVC {
 
         coffeeRate.delegate = self
         prepareActivity()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let realm = try! Realm()
+        let shots = realm.objects(CoffeeShot.self)
+        if !shots.isEmpty {
+            coffeeList = realm.objects(CoffeeInfo.self).sorted { $0.shots.count >= $1.shots.count }
+            collectionView.reloadData()
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {

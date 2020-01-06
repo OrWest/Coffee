@@ -14,6 +14,7 @@ class CoffeeInfo: Object, Decodable {
     @objc dynamic var smallMl: Int = 0
     @objc dynamic var largeMl: Int = 0
     @objc dynamic var caffeineMgIn100ml: Int = 0
+    let shots = LinkingObjects(fromType: CoffeeShot.self, property: "coffee")
 
     lazy var image: UIImage? = UIImage(named: "drink_" + name.lowercased()) ?? UIImage(named: "coffee")
 
