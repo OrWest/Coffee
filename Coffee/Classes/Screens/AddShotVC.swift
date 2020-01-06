@@ -40,27 +40,45 @@ class AddShotVC: BaseVC {
 
         caffeinIn100Label.text = Formatter.formatMg(coffee.caffeineMgIn100ml)
         volume = coffee.smallMl
-        updatecaffeinAndVolume()
+        updateCaffeineAndVolume()
+        configureSegmented()
+        updateAddButton()
+    }
+    
+    private func configureSegmented() {
+        if coffee.smallMl == 0 {
+            sizeSegmented.setEnabled(false, forSegmentAt: 0)
+        }
+        if coffee.largeMl == 0 {
+            sizeSegmented.setEnabled(false, forSegmentAt: 1)
+        }
     }
 
-    private func updatecaffeinInside() {
+    private func updateCaffeineInside() {
         let value = Float(volume) / 100 * Float(coffee.caffeineMgIn100ml)
         let roundValue = Int(value.rounded(.down))
         caffeinInsideLabel.text = Formatter.formatMg(roundValue)
     }
+    
+    private func updateAddButton() {
+        addButton.isEnabled = volume > 0
+    }
 
     private func updateVolume() {
         volumeField.text = Formatter.formatMl(volume)
+        updateAddButton()
     }
 
-    private func updatecaffeinAndVolume() {
+    private func updateCaffeineAndVolume() {
         updateVolume()
-        updatecaffeinInside()
+        updateCaffeineInside()
     }
 
     private func updateSegmentedValue() {
         let index: Int?
         switch volume {
+        case 0:
+            index = nil
         case coffee.smallMl:
             index = 0
         case coffee.largeMl:
@@ -82,7 +100,7 @@ class AddShotVC: BaseVC {
             assertionFailure()
         }
 
-        updatecaffeinAndVolume()
+        updateCaffeineAndVolume()
     }
 
     @IBAction func addAction(_ sender: Any) {
@@ -169,7 +187,7 @@ class AddShotVC: BaseVC {
             }
         }
 
-        updatecaffeinInside()
+        updateCaffeineInside()
     }
 }
 
@@ -190,7 +208,7 @@ extension AddShotVC: UITextFieldDelegate {
             self.contentView.transform = .identity
         }
 
-        updatecaffeinAndVolume()
+        updateCaffeineAndVolume()
         updateSegmentedValue()
         sizeSegmented.isEnabled = true
         volumeMaxLabel.isHidden = true
