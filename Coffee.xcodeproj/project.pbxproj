@@ -61,6 +61,7 @@
 		978088A323C3567C00B294BC /* Preload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 978088A223C3567C00B294BC /* Preload.storyboard */; };
 		978231B223C11D6900D00BC7 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978231B123C11D6900D00BC7 /* HealthManager.swift */; };
 		97B8B15623C0B5FC001E7D64 /* DailyCaffeineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B8B15523C0B5FC001E7D64 /* DailyCaffeineView.swift */; };
+		97BCA93223C3964300B02758 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BCA93123C3964300B02758 /* Date+extension.swift */; };
 		97C441D523C11CC600CA9FB3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C441D423C11CC600CA9FB3 /* HealthKit.framework */; };
 		A700155B23BF416000606EF0 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155A23BF416000606EF0 /* StatisticsView.swift */; };
 		A700155D23BF423C00606EF0 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155C23BF423C00606EF0 /* StatisticsVC.swift */; };
@@ -172,6 +173,7 @@
 		978088A223C3567C00B294BC /* Preload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preload.storyboard; sourceTree = "<group>"; };
 		978231B123C11D6900D00BC7 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		97B8B15523C0B5FC001E7D64 /* DailyCaffeineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCaffeineView.swift; sourceTree = "<group>"; };
+		97BCA93123C3964300B02758 /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		97C441D323C11CC600CA9FB3 /* Coffee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coffee.entitlements; sourceTree = "<group>"; };
 		97C441D423C11CC600CA9FB3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		A700155A23BF416000606EF0 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 		973B0B2B23A548CC00F2CCD4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				97BCA93023C3963500B02758 /* Extension */,
 				A73A948F23B4C26B00950199 /* Transition */,
 				973B0B2E23A5494300F2CCD4 /* LNZLayout */,
 				A766DB2D23B2370C001E0A25 /* Formatter.swift */,
@@ -419,6 +422,14 @@
 				97B8B15523C0B5FC001E7D64 /* DailyCaffeineView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		97BCA93023C3963500B02758 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				97BCA93123C3964300B02758 /* Date+extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		A1479284F3DC20789663DA3B /* Pods */ = {
@@ -692,6 +703,7 @@
 				973B0B3223A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift in Sources */,
 				973B0B3523A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift in Sources */,
 				9711116D23A5518800144C72 /* CoffeeShot.swift in Sources */,
+				97BCA93223C3964300B02758 /* Date+extension.swift in Sources */,
 				973B0B3023A5494F00F2CCD4 /* LNZInfiniteCollectionViewLayout.swift in Sources */,
 				A700155D23BF423C00606EF0 /* StatisticsVC.swift in Sources */,
 				97351884239D8B580028A58D /* MainVC.swift in Sources */,

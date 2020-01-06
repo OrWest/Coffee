@@ -8,9 +8,8 @@ target 'Coffee' do
   pod 'Firebase/Analytics', '~> 6.13.0'
   pod 'Firebase/Storage', '~> 6.13.0'
 
-  pod 'RealmSwift', '~> 4.1.1'
+  pod 'RealmSwift', '~> 4.3.0'
   pod 'ActivityRings', '2.0.1'
-  pod 'SwiftDate', '~> 5.0'
 
   target 'CoffeeTests' do
     inherit! :search_paths

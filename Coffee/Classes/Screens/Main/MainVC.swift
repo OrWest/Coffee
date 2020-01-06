@@ -9,7 +9,6 @@
 import UIKit
 import RealmSwift
 import ActivityRings
-import SwiftDate
 
 class MainVC: BaseVC {
     private let ringActivityInitialDuration = 2.0
@@ -23,7 +22,7 @@ class MainVC: BaseVC {
     @IBOutlet weak var activityContainerView: UIView!
 
     private let coffeeList = try! Realm().objects(CoffeeInfo.self)
-    private let todayShotsList = try! Realm().objects(CoffeeShot.self).filter("date >= %@", Date().dateAtStartOf(.day))
+    private let todayShotsList = try! Realm().objects(CoffeeShot.self).filter("date >= %@", Date().startOfDay())
     private var todayShotsToken: NotificationToken?
     private let coffeeRate = CoffeeRate.default
 
