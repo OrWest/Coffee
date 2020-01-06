@@ -26,7 +26,7 @@ class HealthManager {
     static let shared = HealthManager()
     
     private(set) var status: Status = .unavailable
-    private var userAllowedIntegration: Bool? {
+    private(set) var userAllowedIntegration: Bool? {
         didSet {
             UserDefaults.standard.set(userAllowedIntegration, forKey: UDHealthAllowedByUserKey)
         }

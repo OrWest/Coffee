@@ -98,17 +98,16 @@ class AddShotVC: BaseVC {
             self.dismiss(animated: true)
         }
         
-        if case .shouldRequest = healthManager.status {
+        // User didn't decline integration (hasn't been asked or allowed) -> should request if needed
+        if case .shouldRequest = healthManager.status, healthManager.userAllowedIntegration != false {
             offerHealthShare {
                 DispatchQueue.main.async { [weak self] in
                     self?.healthManager.addCaffeine(shot: shot)
                     addShowBlock()
                 }
             }
-        } else if case .granted = healthManager.status {
-            healthManager.addCaffeine(shot: shot)
-            addShowBlock()
         } else {
+            healthManager.addCaffeine(shot: shot)
             addShowBlock()
         }
     }
