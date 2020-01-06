@@ -13,7 +13,6 @@ class HealthManager {
     enum Status {
         case unavailable
         case shouldRequest
-        case declined
         case granted
         case error(Error)
     }
@@ -22,30 +21,45 @@ class HealthManager {
 
     private var typesToWrite: Set<HKQuantityType> { [caffeineType] }
     
-    private let UDHealthDeclinedByUserKey = "HealthInfoDeclinedByUser"
+    private let UDHealthAllowedByUserKey = "HealthInfoAllowedByUser"
     
     static let shared = HealthManager()
     
     private(set) var status: Status = .unavailable
+    private var userAllowedIntegration: Bool? {
+        didSet {
+            UserDefaults.standard.set(userAllowedIntegration, forKey: UDHealthAllowedByUserKey)
+        }
+    }
     private let healthStore = HKHealthStore()
+    
+    var healthEnabled: Bool {
+        guard let userAllowedIntegration = userAllowedIntegration else {
+            return false
+        }
+        
+        var enabled = userAllowedIntegration
+        switch status {
+            case .granted:
+                break
+            default:
+                enabled = false
+        }
+        
+        return enabled
+    }
     
     private init() {
         guard HKHealthStore.isHealthDataAvailable() else { return }
         
-        if UserDefaults.standard.bool(forKey: UDHealthDeclinedByUserKey) {
-            self.status = .declined
-        }
+        self.userAllowedIntegration = UserDefaults.standard.object(forKey: UDHealthAllowedByUserKey) as? Bool
         
         healthStore.getRequestStatusForAuthorization(toShare: typesToWrite, read: []) { status, error in
             switch status {
             case .unnecessary:
                 self.status = .granted
             case .shouldRequest:
-                
-                // If not declined, set this state. First state is .unavailable
-                if case .unavailable = self.status {
-                    self.status = .shouldRequest
-                }
+                self.status = .shouldRequest
             case .unknown:
                 if let error = error {
                     self.status = .error(error)
@@ -59,6 +73,13 @@ class HealthManager {
     }
     
     func requestAuthorization(completion: ((Error?) -> Void)? = nil) {
+        userAllowedIntegration = true
+        
+        if case .granted = status {
+            // Do not need call this method with already granted access.
+            return
+        }
+        
         healthStore.requestAuthorization(toShare: typesToWrite, read: []) { [unowned self] granted, error in
             if granted {
                 self.status = .granted
@@ -68,12 +89,11 @@ class HealthManager {
     }
     
     func userDeclineHealthSharing() {
-        status = .declined
-        UserDefaults.standard.set(true, forKey: UDHealthDeclinedByUserKey)
+        userAllowedIntegration = false
     }
     
     func addCaffeine(shot: CoffeeShot) {
-        guard canAddCaffeine() else { return }
+        guard healthEnabled, canAddCaffeineToHealth() else { return }
         
         let gram = Double(shot.caffeinInside) / 1000.0
         let quantity = HKQuantity(unit: HKUnit(from: .gram), doubleValue: gram)
@@ -91,7 +111,7 @@ class HealthManager {
         }
     }
     
-    private func canAddCaffeine() -> Bool {
+    private func canAddCaffeineToHealth() -> Bool {
         switch healthStore.authorizationStatus(for: HKQuantityType.quantityType(forIdentifier: .dietaryCaffeine)!) {
             case .sharingAuthorized:
                 return true

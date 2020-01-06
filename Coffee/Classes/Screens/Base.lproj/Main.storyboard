@@ -125,6 +125,34 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="ovm-0c-a94">
+                                        <rect key="frame" x="0.0" y="105" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ovm-0c-a94" id="7mE-Y2-IxZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health integration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI9-In-TbQ">
+                                                    <rect key="frame" x="16" y="11.5" width="137" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rjz-i8-XHk">
+                                                    <rect key="frame" x="306" y="6.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="healthSwitchAction" destination="oBy-KO-73g" eventType="valueChanged" id="f7b-BV-HrM"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Rjz-i8-XHk" firstAttribute="centerY" secondItem="7mE-Y2-IxZ" secondAttribute="centerY" id="2i3-Ni-pTh"/>
+                                                <constraint firstItem="qI9-In-TbQ" firstAttribute="leading" secondItem="7mE-Y2-IxZ" secondAttribute="leadingMargin" id="3MG-yG-caY"/>
+                                                <constraint firstAttribute="trailing" secondItem="Rjz-i8-XHk" secondAttribute="trailing" constant="20" symbolic="YES" id="MrK-kD-wAH"/>
+                                                <constraint firstItem="qI9-In-TbQ" firstAttribute="centerY" secondItem="7mE-Y2-IxZ" secondAttribute="centerY" id="Mtb-LY-sN7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -136,6 +164,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="A9c-38-ibh"/>
                     <connections>
                         <outlet property="currentDailyCaffeineMg" destination="xEg-9b-eZd" id="tb8-va-ilI"/>
+                        <outlet property="healthSwitch" destination="Rjz-i8-XHk" id="1AH-dX-vgg"/>
                         <outlet property="shotCountLabel" destination="uge-Ot-8zH" id="L0h-bV-olH"/>
                     </connections>
                 </tableViewController>

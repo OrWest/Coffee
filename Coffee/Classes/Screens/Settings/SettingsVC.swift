@@ -15,9 +15,12 @@ class SettingsVC: BaseTableVC {
 
     @IBOutlet weak var shotCountLabel: UILabel!
     @IBOutlet weak var currentDailyCaffeineMg: UILabel!
+    @IBOutlet weak var healthSwitch: UISwitch!
+
 
     private let shotResults = try! Realm().objects(CoffeeShot.self)
     private var shotResultsObserver: NotificationToken?
+    private let healthManager = HealthManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,12 @@ class SettingsVC: BaseTableVC {
 
     deinit {
         shotResultsObserver?.invalidate()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        healthSwitch.isOn = healthManager.healthEnabled
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -45,6 +54,15 @@ class SettingsVC: BaseTableVC {
                 self?.currentDailyCaffeineMg.text = Formatter.formatMg(newRate)
             }
             present(vc, animated: true)
+        }
+    }
+    
+    @IBAction
+    private func healthSwitchAction() {
+        if healthSwitch.isOn {
+            healthManager.requestAuthorization()
+        } else {
+            healthManager.userDeclineHealthSharing()
         }
     }
 }
