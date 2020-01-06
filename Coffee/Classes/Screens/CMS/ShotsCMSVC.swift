@@ -129,31 +129,21 @@ class ShotsCMSVC: BaseTableVC {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let generator = UINotificationFeedbackGenerator()
-            generator.prepare()
-            
-            let alert = FeedbackAlertController(title: "Delete shot", message: "You are trying to delete shot. Are you sure?", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "No", style: .default))
-            alert.addAction(UIAlertAction(title: "Remove", style: .destructive) { [unowned self] _ in
-                let realm = try! Realm()
-                let shot = self.sections[indexPath.section].shots.remove(at: indexPath.row)
-                try! realm.write {
-                    realm.delete(shot)
-                }
+            let realm = try! Realm()
+            let shot = self.sections[indexPath.section].shots.remove(at: indexPath.row)
+            try! realm.write {
+                realm.delete(shot)
+            }
 
-                if self.sections[indexPath.section].shots.isEmpty {
-                    self.sections.remove(at: indexPath.section)
+            if self.sections[indexPath.section].shots.isEmpty {
+                self.sections.remove(at: indexPath.section)
 
-                    tableView.deleteSections([indexPath.section], with: .automatic)
-                } else {
-                    tableView.deleteRows(at: [indexPath], with: .automatic)
-                }
-                
-                generator.notificationOccurred(.success)
-                self.updateNavigationItems()
-            })
+                tableView.deleteSections([indexPath.section], with: .automatic)
+            } else {
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
             
-            present(alert, animated: true)
+            updateNavigationItems()
         }
     }
 
