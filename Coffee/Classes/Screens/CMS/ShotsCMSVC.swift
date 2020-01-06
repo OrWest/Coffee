@@ -16,10 +16,20 @@ class ShotsCMSVC: BaseTableVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
         configureShots()
+        updateNavigationItems()
     }
-
+    
+    private func updateNavigationItems() {
+        if !sections.isEmpty {
+            let deleteAllItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteAllAction))
+            deleteAllItem.tintColor = .systemRed
+            self.navigationItem.rightBarButtonItems = [self.editButtonItem, deleteAllItem]
+        } else {
+            self.navigationItem.rightBarButtonItems = []
+        }
+    }
+    
     private func configureShots() {
         sections.removeAll()
 
@@ -56,6 +66,36 @@ class ShotsCMSVC: BaseTableVC {
         let c2 = Calendar.current.dateComponents([.year, .month, .day], from: date2)
         
         return c1.year == c2.year && c1.month == c2.month && c1.day == c2.day
+    }
+    
+    @objc
+    private func deleteAllAction() {
+        setEditing(false, animated: true)
+        
+        let alert = UIAlertController(title: "Delete all", message: "This action will remove all shots. Do you really want to do that?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "No", style: .default))
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [unowned self] _ in
+            self.deleteAll()
+        }))
+        
+        present(alert, animated: true)
+    }
+    
+    private func deleteAll() {
+        do {
+            let realm = try Realm()
+            
+            try realm.write {
+                let shots = realm.objects(CoffeeShot.self)
+                realm.delete(shots)
+            }
+            
+            sections.removeAll()
+            tableView.reloadData()
+            updateNavigationItems()
+        } catch {
+            print(error)
+        }
     }
 
     // MARK: - Table view data source
