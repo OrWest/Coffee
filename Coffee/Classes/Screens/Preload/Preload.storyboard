@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tLz-9a-281">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Preload View Controller-->
+        <scene sceneID="5xd-J6-Usf">
+            <objects>
+                <viewController id="tLz-9a-281" customClass="PreloadViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7T5-hk-xza">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qx2-br-sZz">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4Ks-cN-Gw8"/>
+                                    <constraint firstAttribute="height" constant="240" id="V5T-gq-468"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="k3k-6v-Y8y" kind="embed" destinationCreationSelector="prepareSwiftUIView:" id="dtp-Dh-mSE"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qx2-br-sZz" firstAttribute="centerX" secondItem="7T5-hk-xza" secondAttribute="centerX" id="r86-1x-stS"/>
+                            <constraint firstItem="qx2-br-sZz" firstAttribute="centerY" secondItem="7T5-hk-xza" secondAttribute="centerY" id="vIO-7o-CUY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uK6-5N-K7f"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NeF-Hb-x8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="le8-kF-yRe">
+            <objects>
+                <hostingController id="k3k-6v-Y8y" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FhG-PS-D4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="375"/>
+        </scene>
+    </scenes>
+</document>

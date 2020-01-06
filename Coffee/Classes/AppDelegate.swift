@@ -7,10 +7,7 @@
 //
 
 import UIKit
-import CoreData
 import Firebase
-
-import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,57 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func initializeServices() {
         FirebaseApp.configure()
-
-        configureRealm()
-        _ = HealthManager.shared
-    }
-    
-    private func configureRealm() {
-        
-        #if DEBUG
-//        var config = Realm.Configuration()
-//
-//        // Use the default directory, but replace the filename with the username
-//        config.fileURL = URL(fileURLWithPath: "/Users/Motor/Documents/Coffee/default.realm")
-//
-//        // Set this as the configuration used for the default Realm
-//        Realm.Configuration.defaultConfiguration = config
-        #endif
-        
-        addCoffee()
-    }
-
-    private func addCoffee() {
-        do {
-            let realm = try Realm()
-
-            guard realm.objects(CoffeeInfo.self).count == 0 else { return }
-
-            let cappuccino = CoffeeInfo()
-            cappuccino.name = "Cappuccino"
-            cappuccino.smallMl = 120
-            cappuccino.largeMl = 240
-            cappuccino.caffeineMgIn100ml = 60
-
-            let latte = CoffeeInfo()
-            latte.name = "Latte"
-            latte.smallMl = 180
-            latte.largeMl = 260
-            latte.caffeineMgIn100ml = 44
-
-            let espresso = CoffeeInfo()
-            espresso.name = "Espresso"
-            espresso.smallMl = 60
-            espresso.largeMl = 120
-            espresso.caffeineMgIn100ml = 89
-
-            try realm.write {
-                realm.add([cappuccino, latte, espresso])
-            }
-
-        } catch {
-            print("Realm error: \(error)")
-        }
     }
 
     // MARK: UISceneSession Lifecycle

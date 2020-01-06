@@ -7,18 +7,24 @@
     {
         "name": "Americano",
         "smallMl": 150,
-        "caffeineMgIn100ml": 42
+        "caffeineMgIn100ml": 43
     },
     {
         "name": "Cafe Latte",
         "smallMl": 236,
         "largeMl": 473,
-        "caffeineMgIn100ml": 31
+        "caffeineMgIn100ml": 32
     },
     {
         "name": "Cappuccino",
         "smallMl": 177,
         "largeMl": 330,
         "caffeineMgIn100ml": 57
+    },
+    {
+        "name": "Mocha",
+        "smallMl": 150,
+        "largeMl": 280,
+        "caffeineMgIn100ml": 43
     }
 ]
