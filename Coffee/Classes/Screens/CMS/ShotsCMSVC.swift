@@ -72,7 +72,7 @@ class ShotsCMSVC: BaseTableVC {
     private func deleteAllAction() {
         setEditing(false, animated: true)
         
-        let alert = UIAlertController(title: "Delete all", message: "This action will remove all shots. Do you really want to do that?", preferredStyle: .alert)
+        let alert = FeedbackAlertController(title: "Delete all", message: "This action will remove all shots. Do you really want to do that?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "No", style: .default))
         alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [unowned self] _ in
             self.deleteAll()
@@ -82,6 +82,9 @@ class ShotsCMSVC: BaseTableVC {
     }
     
     private func deleteAll() {
+        let generator = UINotificationFeedbackGenerator()
+        generator.prepare()
+
         do {
             let realm = try Realm()
             
@@ -92,6 +95,7 @@ class ShotsCMSVC: BaseTableVC {
             
             sections.removeAll()
             tableView.reloadData()
+            generator.notificationOccurred(.success)
             updateNavigationItems()
         } catch {
             print(error)
@@ -125,19 +129,31 @@ class ShotsCMSVC: BaseTableVC {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let realm = try! Realm()
-            let shot = sections[indexPath.section].shots.remove(at: indexPath.row)
-            try! realm.write {
-                realm.delete(shot)
-            }
+            let generator = UINotificationFeedbackGenerator()
+            generator.prepare()
+            
+            let alert = FeedbackAlertController(title: "Delete shot", message: "You are trying to delete shot. Are you sure?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "No", style: .default))
+            alert.addAction(UIAlertAction(title: "Remove", style: .destructive) { [unowned self] _ in
+                let realm = try! Realm()
+                let shot = self.sections[indexPath.section].shots.remove(at: indexPath.row)
+                try! realm.write {
+                    realm.delete(shot)
+                }
 
-            if sections[indexPath.section].shots.isEmpty {
-                sections.remove(at: indexPath.section)
+                if self.sections[indexPath.section].shots.isEmpty {
+                    self.sections.remove(at: indexPath.section)
 
-                tableView.deleteSections([indexPath.section], with: .automatic)
-            } else {
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-            }
+                    tableView.deleteSections([indexPath.section], with: .automatic)
+                } else {
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                }
+                
+                generator.notificationOccurred(.success)
+                self.updateNavigationItems()
+            })
+            
+            present(alert, animated: true)
         }
     }
 

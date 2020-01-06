@@ -27,6 +27,8 @@ class MainVC: BaseVC {
     private let coffeeRate = CoffeeRate.default
 
     private var addShotTransition: MainToAddShotTransition?
+    
+    private var feedbackGenerator: UIImpactFeedbackGenerator?
 
     deinit {
         todayShotsToken?.invalidate()
@@ -35,6 +37,8 @@ class MainVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        (collectionView.collectionViewLayout as? LNZSnapToCenterCollectionViewLayout)?.focusChangeDelegate = self
+        
         coffeeRate.delegate = self
         prepareActivity()
     }
@@ -57,6 +61,15 @@ class MainVC: BaseVC {
             guard let self = self else { return }
             self.coffeeActivity.animateProgress(to: self.coffeeConsumedInPercent(), withDuration: self.ringActivityInitialDuration)
         }
+        
+        feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+        feedbackGenerator?.prepare()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        feedbackGenerator = nil
     }
 
     private func prepareActivity() {
@@ -91,6 +104,9 @@ class MainVC: BaseVC {
             let cell = sender as? UICollectionViewCell,
             let indexPath = collectionView.indexPath(for: cell) else { return }
 
+        let generator = UISelectionFeedbackGenerator()
+        generator.prepare()
+        
         let coffee = coffeeList[indexPath.item]
         dest.coffee = coffee
 
@@ -102,7 +118,10 @@ class MainVC: BaseVC {
 
         addShotTransition = transition
         print("Selected coffee: \(coffee.name)")
+        generator.selectionChanged()
     }
+    
+    
 }
 
 extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -116,7 +135,7 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
         let coffee = coffeeList[indexPath.item]
         cell.nameLabel.text = coffee.name
         cell.coffeeImageView.image = coffee.image
-
+        
         return cell
     }
 }
@@ -126,5 +145,16 @@ extension MainVC: CoffeeRateDelegate {
         let percent = coffeeConsumedInPercent()
         coffeeActivity.animateProgress(to: percent, withDuration: ringActivityUpdateDuration)
         activityLabel.text = Formatter.formatPercent(Int(percent * 100))
+    }
+}
+
+extension MainVC: FocusChangeDelegate {
+    func focusContainer(_ container: FocusedContaining, willChangeElement inFocus: Int, to newInFocus: Int) {
+        
+    }
+    
+    func focusContainer(_ container: FocusedContaining, didChangeElement inFocus: Int) {
+        feedbackGenerator?.impactOccurred()
+
     }
 }

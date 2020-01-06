@@ -24,13 +24,13 @@ class PreloadViewController: UIViewController {
     private func configureRealm() {
         // Migration
             #if DEBUG
-    //        var config = Realm.Configuration()
-    //
-    //        // Use the default directory, but replace the filename with the username
-    //        config.fileURL = URL(fileURLWithPath: "/Users/Motor/Documents/Coffee/default.realm")
-    //
-    //        // Set this as the configuration used for the default Realm
-    //        Realm.Configuration.defaultConfiguration = config
+//            var config = Realm.Configuration()
+//    
+//            // Use the default directory, but replace the filename with the username
+//            config.fileURL = URL(fileURLWithPath: "/Users/Motor/Documents/Coffee/default.realm")
+//    
+//            // Set this as the configuration used for the default Realm
+//            Realm.Configuration.defaultConfiguration = config
             #endif
         
         DispatchQueue.global().async {
@@ -72,7 +72,8 @@ class PreloadViewController: UIViewController {
     }
     
     private func showError() {
-        let alert = UIAlertController(title: "Error", message: "Cannot load start up info. Please, check internet connection.", preferredStyle: .alert)
+        let alert = FeedbackAlertController(title: "Error", message: "Cannot load start up info. Please, check internet connection.", preferredStyle: .alert)
+        alert.feedbackType = .error
         alert.addAction(UIAlertAction(title: "Load again", style: .default) { [unowned self] _ in
             DispatchQueue.global().async {
                 self.downloadCoffeeInfo { error in

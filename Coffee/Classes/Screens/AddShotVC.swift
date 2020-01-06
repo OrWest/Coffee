@@ -142,7 +142,7 @@ class AddShotVC: BaseVC {
     }
 
     private func offerHealthShare(completion: @escaping () -> Void) {
-        let alert = UIAlertController(title: "Health app", message: "Application can share caffeine consumption with your Health app. But need permitions first. Do you want to do this now?", preferredStyle: .alert)
+        let alert = FeedbackAlertController(title: "Health app", message: "Application can share caffeine consumption with your Health app. But need permitions first. Do you want to do this now?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .default) { [unowned self] _ in
             self.healthManager.requestAuthorization { error in
                 if let error = error {

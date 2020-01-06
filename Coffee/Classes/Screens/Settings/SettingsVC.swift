@@ -17,7 +17,6 @@ class SettingsVC: BaseTableVC {
     @IBOutlet weak var currentDailyCaffeineMg: UILabel!
     @IBOutlet weak var healthSwitch: UISwitch!
 
-
     private let shotResults = try! Realm().objects(CoffeeShot.self)
     private var shotResultsObserver: NotificationToken?
     private let healthManager = HealthManager.shared
