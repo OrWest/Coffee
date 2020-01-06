@@ -8,7 +8,6 @@
 
 import UIKit
 import RealmSwift
-import SwiftDate
 
 class ShotsCMSVC: BaseTableVC {
 
@@ -30,7 +29,7 @@ class ShotsCMSVC: BaseTableVC {
             var lastDate: Date?
             var shotsInDay: [CoffeeShot] = []
             for shot in shots {
-                if let date = lastDate, shot.date.isBeforeDate(date, granularity: .day) {
+                if let date = lastDate, !isSameDate(shot.date, date) {
                     let newSection = CMSShotSection(
                         name: Formatter.formatCMSSectionDate(date),
                         shots: shotsInDay
@@ -50,6 +49,13 @@ class ShotsCMSVC: BaseTableVC {
         } catch {
             print(error)
         }
+    }
+    
+    private func isSameDate(_ date1: Date, _ date2: Date) -> Bool {
+        let c1 = Calendar.current.dateComponents([.year, .month, .day], from: date1)
+        let c2 = Calendar.current.dateComponents([.year, .month, .day], from: date2)
+        
+        return c1.year == c2.year && c1.month == c2.month && c1.day == c2.day
     }
 
     // MARK: - Table view data source
