@@ -12,6 +12,7 @@
 		9711116B23A5507C00144C72 /* CoffeeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711116A23A5507C00144C72 /* CoffeeInfo.swift */; };
 		9711116D23A5518800144C72 /* CoffeeShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711116C23A5518800144C72 /* CoffeeShot.swift */; };
 		9712A09523C47A780018F05A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9712A09423C47A770018F05A /* GoogleService-Info.plist */; };
+		9712A09723C47F4D0018F05A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9712A09623C47F4D0018F05A /* Analytics.swift */; };
 		97351857239D841C0028A58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97351856239D841C0028A58D /* AppDelegate.swift */; };
 		9735185E239D841C0028A58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9735185C239D841C0028A58D /* Main.storyboard */; };
 		97351863239D84220028A58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97351862239D84220028A58D /* Assets.xcassets */; };
@@ -122,6 +123,7 @@
 		9711119223A55A8000144C72 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9711119A23A5667300144C72 /* coffee-info.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "coffee-info.json"; sourceTree = "<group>"; };
 		9712A09423C47A770018F05A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9712A09623C47F4D0018F05A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		97351853239D841C0028A58D /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97351856239D841C0028A58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9735185D239D841C0028A58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				9735187E239D8AEB0028A58D /* Screens */,
 				97351856239D841C0028A58D /* AppDelegate.swift */,
 				A762DCAA23B6203800246692 /* SceneDelegate.swift */,
+				9712A09623C47F4D0018F05A /* Analytics.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -730,6 +733,7 @@
 				97BCA93223C3964300B02758 /* Date+extension.swift in Sources */,
 				973B0B3023A5494F00F2CCD4 /* LNZInfiniteCollectionViewLayout.swift in Sources */,
 				A700155D23BF423C00606EF0 /* StatisticsVC.swift in Sources */,
+				9712A09723C47F4D0018F05A /* Analytics.swift in Sources */,
 				97351884239D8B580028A58D /* MainVC.swift in Sources */,
 				978231B223C11D6900D00BC7 /* HealthManager.swift in Sources */,
 				978088A023C3566600B294BC /* PreloadViewController.swift in Sources */,
