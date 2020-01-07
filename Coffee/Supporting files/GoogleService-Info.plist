@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>398146158733-nai6igo47g408aeuvnm5ft53v6gs6md9.apps.googleusercontent.com</string>
+	<string>398146158733-m5snpksdqodb2pbk69keavu8otckc01j.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.398146158733-nai6igo47g408aeuvnm5ft53v6gs6md9</string>
+	<string>com.googleusercontent.apps.398146158733-m5snpksdqodb2pbk69keavu8otckc01j</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBPCyuf5pi-AQ2yF2TDouSjpsn-4enII_E</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.amo.coffee</string>
+	<string>motarykinao.coffee</string>
 	<key>PROJECT_ID</key>
 	<string>coffee-c82a8</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:398146158733:ios:57d9838c9c02a5612622c4</string>
+	<string>1:398146158733:ios:3965ebb0d0d87be62622c4</string>
 	<key>DATABASE_URL</key>
 	<string>https://coffee-c82a8.firebaseio.com</string>
 </dict>

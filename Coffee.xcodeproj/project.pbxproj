@@ -11,7 +11,7 @@
 		8A9A3E8A80A29A119007B8F6 /* Pods_Coffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1089271304224336279D2CBA /* Pods_Coffee.framework */; };
 		9711116B23A5507C00144C72 /* CoffeeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711116A23A5507C00144C72 /* CoffeeInfo.swift */; };
 		9711116D23A5518800144C72 /* CoffeeShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711116C23A5518800144C72 /* CoffeeShot.swift */; };
-		9711119723A55D0800144C72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9711119623A55D0800144C72 /* GoogleService-Info.plist */; };
+		9712A09523C47A780018F05A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9712A09423C47A770018F05A /* GoogleService-Info.plist */; };
 		97351857239D841C0028A58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97351856239D841C0028A58D /* AppDelegate.swift */; };
 		9735185E239D841C0028A58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9735185C239D841C0028A58D /* Main.storyboard */; };
 		97351863239D84220028A58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97351862239D84220028A58D /* Assets.xcassets */; };
@@ -120,8 +120,8 @@
 		9711118E23A55A6E00144C72 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9711119023A55A7500144C72 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		9711119223A55A8000144C72 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		9711119623A55D0800144C72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9711119A23A5667300144C72 /* coffee-info.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "coffee-info.json"; sourceTree = "<group>"; };
+		9712A09423C47A770018F05A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		97351853239D841C0028A58D /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97351856239D841C0028A58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9735185D239D841C0028A58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 		9735187B239D88450028A58D /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				9711119623A55D0800144C72 /* GoogleService-Info.plist */,
+				9712A09423C47A770018F05A /* GoogleService-Info.plist */,
 				97351864239D84220028A58D /* LaunchScreen.storyboard */,
 				97351867239D84220028A58D /* Info.plist */,
 				9711119A23A5667300144C72 /* coffee-info.json */,
@@ -601,7 +601,6 @@
 				9754844423C35D9C00A7C995 /* preloader15.gif in Resources */,
 				9754844F23C35D9C00A7C995 /* preloader24.gif in Resources */,
 				9754845E23C35D9C00A7C995 /* preloader16.gif in Resources */,
-				9711119723A55D0800144C72 /* GoogleService-Info.plist in Resources */,
 				97351863239D84220028A58D /* Assets.xcassets in Resources */,
 				9754844723C35D9C00A7C995 /* preloader11.gif in Resources */,
 				9754845823C35D9C00A7C995 /* preloader6.gif in Resources */,
@@ -614,6 +613,7 @@
 				9754845623C35D9C00A7C995 /* preloader18.gif in Resources */,
 				9754845223C35D9C00A7C995 /* preloader27.gif in Resources */,
 				9754844623C35D9C00A7C995 /* preloader29.gif in Resources */,
+				9712A09523C47A780018F05A /* GoogleService-Info.plist in Resources */,
 				9754845123C35D9C00A7C995 /* preloader1.gif in Resources */,
 				9754845A23C35D9C00A7C995 /* preloader2.gif in Resources */,
 				9754845F23C35D9C00A7C995 /* preloader19.gif in Resources */,
@@ -910,7 +910,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amo.coffee;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = motarykinao.coffee;
 				PRODUCT_NAME = Coffee;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -934,7 +935,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amo.coffee;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = motarykinao.coffee;
 				PRODUCT_NAME = Coffee;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
