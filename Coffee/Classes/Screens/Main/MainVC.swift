@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import MKRingProgressView
 
 class MainVC: BaseVC {
     private let ringActivityInitialDuration = 2.0
@@ -15,7 +16,7 @@ class MainVC: BaseVC {
     private let coffeeSelectedSegueId = "coffeeSelected"
 
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var coffeeActivity: ActivityRingView!
+    @IBOutlet weak var coffeeActivity: RingProgressView!
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var activityContainerView: UIView!
@@ -57,8 +58,7 @@ class MainVC: BaseVC {
         super.viewDidLoad()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) { [weak self] in
-            guard let self = self else { return }
-            self.coffeeActivity.animateProgress(to: self.coffeeConsumedInPercent(), withDuration: self.ringActivityInitialDuration)
+            self?.animateProgressActivity(to: self?.coffeeConsumedInPercent() ?? 0)
         }
         
         feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
@@ -86,7 +86,7 @@ class MainVC: BaseVC {
     }
 
     private func updateCoffeeAcitivity(value: Double) {
-        coffeeActivity.animateProgress(to: value, withDuration: ringActivityInitialDuration)
+        animateProgressActivity(to: value)
         activityLabel.text = Formatter.formatPercent(Int(value * 100))
     }
 
@@ -120,7 +120,11 @@ class MainVC: BaseVC {
         generator.selectionChanged()
     }
     
-    
+    private func animateProgressActivity(to progress: Double) {
+        UIView.animate(withDuration: ringActivityInitialDuration) { [weak self] in
+            self?.coffeeActivity.progress = progress
+        }
+    }
 }
 
 extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -142,7 +146,7 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
 extension MainVC: CoffeeRateDelegate {
     func rateUpdated(_ newValue: Int) {
         let percent = coffeeConsumedInPercent()
-        coffeeActivity.animateProgress(to: percent, withDuration: ringActivityUpdateDuration)
+        animateProgressActivity(to: percent)
         activityLabel.text = Formatter.formatPercent(Int(percent * 100))
     }
 }

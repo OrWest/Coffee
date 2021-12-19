@@ -9,6 +9,15 @@
           "revision": "524aec2a04b1fdd6fafbeae33ed34dc6b8064d77",
           "version": "1.4.4"
         }
+      },
+      {
+        "package": "MKRingProgressView",
+        "repositoryURL": "https://github.com/maxkonovalov/MKRingProgressView.git",
+        "state": {
+          "branch": null,
+          "revision": "660888aab1d2ab0ed7eb9eb53caec12af4955fa7",
+          "version": "2.3.0"
+        }
       }
     ]
   },

@@ -68,12 +68,7 @@
 		97BCA93923C3D93800B02758 /* FeedbackAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BCA93823C3D93800B02758 /* FeedbackAlertController.swift */; };
 		97BCA93B23C3D9F400B02758 /* FeedbackSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BCA93A23C3D9F400B02758 /* FeedbackSegmentedControl.swift */; };
 		97C441D523C11CC600CA9FB3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C441D423C11CC600CA9FB3 /* HealthKit.framework */; };
-		97E38C27276FDD8700CA5238 /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E38C1F276FDD8700CA5238 /* ActivityRingView.swift */; };
-		97E38C28276FDD8700CA5238 /* Double+Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E38C21276FDD8700CA5238 /* Double+Animatable.swift */; };
-		97E38C29276FDD8700CA5238 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E38C22276FDD8700CA5238 /* Animatable.swift */; };
-		97E38C2A276FDD8700CA5238 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E38C23276FDD8700CA5238 /* Animator.swift */; };
-		97E38C2B276FDD8700CA5238 /* ActivityRingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E38C24276FDD8700CA5238 /* ActivityRingScene.swift */; };
-		97E38C2D276FDD8700CA5238 /* UIColor+RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E38C26276FDD8700CA5238 /* UIColor+RGBA.swift */; };
+		97E38C30276FE59900CA5238 /* MKRingProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = 97E38C2F276FE59900CA5238 /* MKRingProgressView */; };
 		A700155B23BF416000606EF0 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155A23BF416000606EF0 /* StatisticsView.swift */; };
 		A700155D23BF423C00606EF0 /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155C23BF423C00606EF0 /* StatisticsVC.swift */; };
 		A700155F23BF4B5700606EF0 /* StatisticsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A700155E23BF4B5700606EF0 /* StatisticsData.swift */; };
@@ -192,12 +187,6 @@
 		97BCA93A23C3D9F400B02758 /* FeedbackSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackSegmentedControl.swift; sourceTree = "<group>"; };
 		97C441D323C11CC600CA9FB3 /* Coffee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coffee.entitlements; sourceTree = "<group>"; };
 		97C441D423C11CC600CA9FB3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		97E38C1F276FDD8700CA5238 /* ActivityRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
-		97E38C21276FDD8700CA5238 /* Double+Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Animatable.swift"; sourceTree = "<group>"; };
-		97E38C22276FDD8700CA5238 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
-		97E38C23276FDD8700CA5238 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		97E38C24276FDD8700CA5238 /* ActivityRingScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityRingScene.swift; sourceTree = "<group>"; };
-		97E38C26276FDD8700CA5238 /* UIColor+RGBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBA.swift"; sourceTree = "<group>"; };
 		A700155A23BF416000606EF0 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		A700155C23BF423C00606EF0 /* StatisticsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		A700155E23BF4B5700606EF0 /* StatisticsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsData.swift; sourceTree = "<group>"; };
@@ -222,6 +211,7 @@
 			files = (
 				97C441D523C11CC600CA9FB3 /* HealthKit.framework in Frameworks */,
 				8A9A3E8A80A29A119007B8F6 /* Pods_Coffee.framework in Frameworks */,
+				97E38C30276FE59900CA5238 /* MKRingProgressView in Frameworks */,
 				A73AB7CB23B9EC8900274718 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +299,6 @@
 		9735187D239D8ADA0028A58D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				97E38C0D276FDC6E00CA5238 /* Libraries */,
 				973B0B2B23A548CC00F2CCD4 /* Helper */,
 				9711116923A5507300144C72 /* Models */,
 				97351880239D8B1C0028A58D /* Base */,
@@ -468,35 +457,6 @@
 			path = Feedback;
 			sourceTree = "<group>";
 		};
-		97E38C0D276FDC6E00CA5238 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				97E38C1E276FDD8700CA5238 /* ActivityRings */,
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
-		97E38C1E276FDD8700CA5238 /* ActivityRings */ = {
-			isa = PBXGroup;
-			children = (
-				97E38C1F276FDD8700CA5238 /* ActivityRingView.swift */,
-				97E38C20276FDD8700CA5238 /* Animator */,
-				97E38C24276FDD8700CA5238 /* ActivityRingScene.swift */,
-				97E38C26276FDD8700CA5238 /* UIColor+RGBA.swift */,
-			);
-			path = ActivityRings;
-			sourceTree = "<group>";
-		};
-		97E38C20276FDD8700CA5238 /* Animator */ = {
-			isa = PBXGroup;
-			children = (
-				97E38C21276FDD8700CA5238 /* Double+Animatable.swift */,
-				97E38C22276FDD8700CA5238 /* Animatable.swift */,
-				97E38C23276FDD8700CA5238 /* Animator.swift */,
-			);
-			path = Animator;
-			sourceTree = "<group>";
-		};
 		A1479284F3DC20789663DA3B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,6 +521,7 @@
 			name = Coffee;
 			packageProductDependencies = (
 				A73AB7CA23B9EC8900274718 /* SwiftUICharts */,
+				97E38C2F276FE59900CA5238 /* MKRingProgressView */,
 			);
 			productName = Coffee;
 			productReference = 97351853239D841C0028A58D /* Coffee.app */;
@@ -615,6 +576,7 @@
 			mainGroup = 9735184A239D841C0028A58D;
 			packageReferences = (
 				A73AB7C923B9EC8900274718 /* XCRemoteSwiftPackageReference "ChartView" */,
+				97E38C2E276FE59900CA5238 /* XCRemoteSwiftPackageReference "MKRingProgressView" */,
 			);
 			productRefGroup = 97351854239D841C0028A58D /* Products */;
 			projectDirPath = "";
@@ -755,10 +717,7 @@
 				A766DB3323B249C2001E0A25 /* ShotsCMSVC.swift in Sources */,
 				A766DB2E23B2370C001E0A25 /* Formatter.swift in Sources */,
 				A73A949323B4C30D00950199 /* OpenAddShotAnimator.swift in Sources */,
-				97E38C28276FDD8700CA5238 /* Double+Animatable.swift in Sources */,
-				97E38C29276FDD8700CA5238 /* Animatable.swift in Sources */,
 				975FD40823BF5AC6003A7C30 /* CoffeeDrinkVerticalCapsule.swift in Sources */,
-				97E38C2B276FDD8700CA5238 /* ActivityRingScene.swift in Sources */,
 				97BCA93423C3B72E00B02758 /* FeedbackButton.swift in Sources */,
 				A73A949123B4C27F00950199 /* MainToAddShotTransition.swift in Sources */,
 				97BCA93B23C3D9F400B02758 /* FeedbackSegmentedControl.swift in Sources */,
@@ -771,7 +730,6 @@
 				973B0B2D23A548F800F2CCD4 /* LNZCarouselCollectionViewLayout.swift in Sources */,
 				A762DC8923B6018800246692 /* CMSShotCell.swift in Sources */,
 				A700155F23BF4B5700606EF0 /* StatisticsData.swift in Sources */,
-				97E38C2D276FDD8700CA5238 /* UIColor+RGBA.swift in Sources */,
 				975FD40623BF5A2F003A7C30 /* CoffeeDrinkStatisticsView.swift in Sources */,
 				973B0B3223A5496800F2CCD4 /* LNZSnapToCenterCollectionViewLayout.swift in Sources */,
 				973B0B3523A54B7900F2CCD4 /* CoffeeCollectionViewCell.swift in Sources */,
@@ -780,7 +738,6 @@
 				973B0B3023A5494F00F2CCD4 /* LNZInfiniteCollectionViewLayout.swift in Sources */,
 				A700155D23BF423C00606EF0 /* StatisticsVC.swift in Sources */,
 				9712A09723C47F4D0018F05A /* Analytics.swift in Sources */,
-				97E38C2A276FDD8700CA5238 /* Animator.swift in Sources */,
 				97351884239D8B580028A58D /* MainVC.swift in Sources */,
 				978231B223C11D6900D00BC7 /* HealthManager.swift in Sources */,
 				978088A023C3566600B294BC /* PreloadViewController.swift in Sources */,
@@ -789,7 +746,6 @@
 				A754178223B5F99C00F4D7A0 /* CMSShotSection.swift in Sources */,
 				9711116B23A5507C00144C72 /* CoffeeInfo.swift in Sources */,
 				A73A948D23B4AC8300950199 /* CoffeeRate.swift in Sources */,
-				97E38C27276FDD8700CA5238 /* ActivityRingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1074,6 +1030,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		97E38C2E276FE59900CA5238 /* XCRemoteSwiftPackageReference "MKRingProgressView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxkonovalov/MKRingProgressView.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.3.0;
+			};
+		};
 		A73AB7C923B9EC8900274718 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView";
@@ -1085,6 +1049,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		97E38C2F276FE59900CA5238 /* MKRingProgressView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97E38C2E276FE59900CA5238 /* XCRemoteSwiftPackageReference "MKRingProgressView" */;
+			productName = MKRingProgressView;
+		};
 		A73AB7CA23B9EC8900274718 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A73AB7C923B9EC8900274718 /* XCRemoteSwiftPackageReference "ChartView" */;
