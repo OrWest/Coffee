@@ -8,7 +8,6 @@
 
 import UIKit
 import RealmSwift
-import ActivityRings
 
 class MainVC: BaseVC {
     private let ringActivityInitialDuration = 2.0
