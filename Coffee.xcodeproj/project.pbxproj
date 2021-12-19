@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4FDB0DB5841D918640AE2F16 /* Pods_CoffeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BB4AADCA0D94062FBE6A70 /* Pods_CoffeeTests.framework */; };
-		8A9A3E8A80A29A119007B8F6 /* Pods_Coffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1089271304224336279D2CBA /* Pods_Coffee.framework */; };
 		9711116B23A5507C00144C72 /* CoffeeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711116A23A5507C00144C72 /* CoffeeInfo.swift */; };
 		9711116D23A5518800144C72 /* CoffeeShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711116C23A5518800144C72 /* CoffeeShot.swift */; };
 		9712A09523C47A780018F05A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9712A09423C47A770018F05A /* GoogleService-Info.plist */; };
 		9712A09723C47F4D0018F05A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9712A09623C47F4D0018F05A /* Analytics.swift */; };
+		972B9F71276FF1D20056DDB2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 972B9F70276FF1D20056DDB2 /* FirebaseAnalytics */; };
+		972B9F73276FF1D20056DDB2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 972B9F72276FF1D20056DDB2 /* FirebaseStorage */; };
+		972B9F76276FF24B0056DDB2 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 972B9F75276FF24B0056DDB2 /* Realm */; };
+		972B9F78276FF24B0056DDB2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 972B9F77276FF24B0056DDB2 /* RealmSwift */; };
 		97351857239D841C0028A58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97351856239D841C0028A58D /* AppDelegate.swift */; };
 		9735185E239D841C0028A58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9735185C239D841C0028A58D /* Main.storyboard */; };
 		97351863239D84220028A58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97351862239D84220028A58D /* Assets.xcassets */; };
@@ -111,12 +113,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		03741BB56A3F890D5C6315A3 /* Pods-CoffeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTests.release.xcconfig"; path = "Target Support Files/Pods-CoffeeTests/Pods-CoffeeTests.release.xcconfig"; sourceTree = "<group>"; };
-		07E908EDC78227141B7ECF2F /* Pods-Coffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee.release.xcconfig"; path = "Target Support Files/Pods-Coffee/Pods-Coffee.release.xcconfig"; sourceTree = "<group>"; };
-		1089271304224336279D2CBA /* Pods_Coffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3983CD09CF07F9EE60844B38 /* Pods-CoffeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTests.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeTests/Pods-CoffeeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		73BB4AADCA0D94062FBE6A70 /* Pods_CoffeeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B1BA6B2DB25DD9FCD61F19E /* Pods-Coffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee.debug.xcconfig"; path = "Target Support Files/Pods-Coffee/Pods-Coffee.debug.xcconfig"; sourceTree = "<group>"; };
 		9711116A23A5507C00144C72 /* CoffeeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeInfo.swift; sourceTree = "<group>"; };
 		9711116C23A5518800144C72 /* CoffeeShot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShot.swift; sourceTree = "<group>"; };
 		9711118E23A55A6E00144C72 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -209,9 +205,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972B9F76276FF24B0056DDB2 /* Realm in Frameworks */,
 				97C441D523C11CC600CA9FB3 /* HealthKit.framework in Frameworks */,
-				8A9A3E8A80A29A119007B8F6 /* Pods_Coffee.framework in Frameworks */,
+				972B9F78276FF24B0056DDB2 /* RealmSwift in Frameworks */,
 				97E38C30276FE59900CA5238 /* MKRingProgressView in Frameworks */,
+				972B9F71276FF1D20056DDB2 /* FirebaseAnalytics in Frameworks */,
+				972B9F73276FF1D20056DDB2 /* FirebaseStorage in Frameworks */,
 				A73AB7CB23B9EC8900274718 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +219,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FDB0DB5841D918640AE2F16 /* Pods_CoffeeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +241,6 @@
 				9735186F239D84220028A58D /* CoffeeTests */,
 				97351854239D841C0028A58D /* Products */,
 				973B0B2323A547F600F2CCD4 /* Frameworks */,
-				A1479284F3DC20789663DA3B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -343,8 +340,6 @@
 				9711118E23A55A6E00144C72 /* libsqlite3.tbd */,
 				973B0B2523A547F600F2CCD4 /* Realm.framework */,
 				973B0B2423A547F600F2CCD4 /* RealmSwift.framework */,
-				1089271304224336279D2CBA /* Pods_Coffee.framework */,
-				73BB4AADCA0D94062FBE6A70 /* Pods_CoffeeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -457,17 +452,6 @@
 			path = Feedback;
 			sourceTree = "<group>";
 		};
-		A1479284F3DC20789663DA3B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8B1BA6B2DB25DD9FCD61F19E /* Pods-Coffee.debug.xcconfig */,
-				07E908EDC78227141B7ECF2F /* Pods-Coffee.release.xcconfig */,
-				3983CD09CF07F9EE60844B38 /* Pods-CoffeeTests.debug.xcconfig */,
-				03741BB56A3F890D5C6315A3 /* Pods-CoffeeTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		A73A948F23B4C26B00950199 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
@@ -507,12 +491,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97351875239D84220028A58D /* Build configuration list for PBXNativeTarget "Coffee" */;
 			buildPhases = (
-				2725A9A2659F016A648AD52D /* [CP] Check Pods Manifest.lock */,
 				9735184F239D841C0028A58D /* Sources */,
 				97351850239D841C0028A58D /* Frameworks */,
 				97351851239D841C0028A58D /* Resources */,
 				973B0B2A23A547F600F2CCD4 /* Embed Frameworks */,
-				F6062205E45DCEE8A5887200 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -522,6 +504,10 @@
 			packageProductDependencies = (
 				A73AB7CA23B9EC8900274718 /* SwiftUICharts */,
 				97E38C2F276FE59900CA5238 /* MKRingProgressView */,
+				972B9F70276FF1D20056DDB2 /* FirebaseAnalytics */,
+				972B9F72276FF1D20056DDB2 /* FirebaseStorage */,
+				972B9F75276FF24B0056DDB2 /* Realm */,
+				972B9F77276FF24B0056DDB2 /* RealmSwift */,
 			);
 			productName = Coffee;
 			productReference = 97351853239D841C0028A58D /* Coffee.app */;
@@ -531,7 +517,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97351878239D84220028A58D /* Build configuration list for PBXNativeTarget "CoffeeTests" */;
 			buildPhases = (
-				050F7F6F70D91003FC9FC93C /* [CP] Check Pods Manifest.lock */,
 				97351868239D84220028A58D /* Sources */,
 				97351869239D84220028A58D /* Frameworks */,
 				9735186A239D84220028A58D /* Resources */,
@@ -577,7 +562,8 @@
 			packageReferences = (
 				A73AB7C923B9EC8900274718 /* XCRemoteSwiftPackageReference "ChartView" */,
 				97E38C2E276FE59900CA5238 /* XCRemoteSwiftPackageReference "MKRingProgressView" */,
-				97E38C31276FE9E000CA5238 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				972B9F6F276FF1D20056DDB2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				972B9F74276FF24B0056DDB2 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 97351854239D841C0028A58D /* Products */;
 			projectDirPath = "";
@@ -640,70 +626,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		050F7F6F70D91003FC9FC93C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CoffeeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2725A9A2659F016A648AD52D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Coffee-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6062205E45DCEE8A5887200 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coffee/Pods-Coffee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Coffee/Pods-Coffee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coffee/Pods-Coffee-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9735184F239D841C0028A58D /* Sources */ = {
@@ -904,7 +826,6 @@
 		};
 		97351876239D84220028A58D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B1BA6B2DB25DD9FCD61F19E /* Pods-Coffee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Coffee/Coffee.entitlements;
@@ -929,7 +850,6 @@
 		};
 		97351877239D84220028A58D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07E908EDC78227141B7ECF2F /* Pods-Coffee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Coffee/Coffee.entitlements;
@@ -954,7 +874,6 @@
 		};
 		97351879239D84220028A58D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3983CD09CF07F9EE60844B38 /* Pods-CoffeeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -977,7 +896,6 @@
 		};
 		9735187A239D84220028A58D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03741BB56A3F890D5C6315A3 /* Pods-CoffeeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1031,20 +949,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		972B9F6F276FF1D20056DDB2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		972B9F74276FF24B0056DDB2 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.0;
+			};
+		};
 		97E38C2E276FE59900CA5238 /* XCRemoteSwiftPackageReference "MKRingProgressView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maxkonovalov/MKRingProgressView.git";
 			requirement = {
 				kind = exactVersion;
 				version = 2.3.0;
-			};
-		};
-		97E38C31276FE9E000CA5238 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
 			};
 		};
 		A73AB7C923B9EC8900274718 /* XCRemoteSwiftPackageReference "ChartView" */ = {
@@ -1058,6 +984,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		972B9F70276FF1D20056DDB2 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 972B9F6F276FF1D20056DDB2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		972B9F72276FF1D20056DDB2 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 972B9F6F276FF1D20056DDB2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		972B9F75276FF24B0056DDB2 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 972B9F74276FF24B0056DDB2 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		972B9F77276FF24B0056DDB2 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 972B9F74276FF24B0056DDB2 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		97E38C2F276FE59900CA5238 /* MKRingProgressView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 97E38C2E276FE59900CA5238 /* XCRemoteSwiftPackageReference "MKRingProgressView" */;

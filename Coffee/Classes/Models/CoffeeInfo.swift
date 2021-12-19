@@ -6,7 +6,7 @@
 //  Copyright © 2019 Alexander Motarykin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import RealmSwift
 
 class CoffeeInfo: Object, Decodable {
@@ -53,7 +53,7 @@ class CoffeeInfo: Object, Decodable {
         }
     }
     
-    required init() {
+    required override init() {
         super.init()
     }
 }
