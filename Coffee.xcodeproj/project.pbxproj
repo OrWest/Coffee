@@ -577,6 +577,7 @@
 			packageReferences = (
 				A73AB7C923B9EC8900274718 /* XCRemoteSwiftPackageReference "ChartView" */,
 				97E38C2E276FE59900CA5238 /* XCRemoteSwiftPackageReference "MKRingProgressView" */,
+				97E38C31276FE9E000CA5238 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 97351854239D841C0028A58D /* Products */;
 			projectDirPath = "";
@@ -1036,6 +1037,14 @@
 			requirement = {
 				kind = exactVersion;
 				version = 2.3.0;
+			};
+		};
+		97E38C31276FE9E000CA5238 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
 			};
 		};
 		A73AB7C923B9EC8900274718 /* XCRemoteSwiftPackageReference "ChartView" */ = {
